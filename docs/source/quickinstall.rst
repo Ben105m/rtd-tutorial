@@ -13,17 +13,24 @@ Sources
 ---------------------------
 
 Following documents have been used to write this README :
+
 - `Version5 distributions <http://merlin.polymtl.ca/development.htm>`_
+
 - `PyGan guide <http://merlin.polymtl.ca/downloads/IGE332.pdf>`_
+
 - `Virtual environnement configuration <http://peanuts:8080/bin/view/Informatique/Python/>`_
+
 
 ---------------------------
 Contacts
 ---------------------------
 
 If you have problems, questions, or improvements for PyDrag, you may contact following users :
+
 - `SALINO Vivian <mailto:vivian.salino@irsn.fr>`_
+
 - `TAFOREAU Julien <mailto:julien.taforeau@irsn.fr>`_
+
 - `BENEDET Benjamin <mailto:benjamin.benedet@uranus-tech.net>`_
 
 ---------------------------
@@ -31,8 +38,11 @@ Developpement environnement
 ---------------------------
 
 PyDrag is developped under the following environnement:
+
 - CentOS Linux release 7.8.2003 (Core)
+
 - GCC version 7.3.0
+
 - anaconda3 base environnement + Python 3.6.8 through virtualenv 20.17.0
 
 ==========================
