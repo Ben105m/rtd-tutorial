@@ -7,4 +7,4 @@ API
    lumache
 
 
-Mais qu'est ce que c'est que ce putain de bordel de merde.
+Trying to add some useless comments about API page.
