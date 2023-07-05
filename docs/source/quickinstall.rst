@@ -33,9 +33,9 @@ If you have problems, questions, or improvements for PyDrag, you may contact fol
 
 - `BENEDET Benjamin <mailto:benjamin.benedet@uranus-tech.net>`_
 
----------------------------
+-----------------------------
 Developpement environnement
----------------------------
+-----------------------------
 
 PyDrag is developped under the following environnement:
 
@@ -49,9 +49,9 @@ PyDrag is developped under the following environnement:
 Installation of PyDrag
 ==========================
 
----------------------------
+-------------------------------------
 Setting your environnement variables
----------------------------
+-------------------------------------
 
 First, you need to set some variables used by Version5 and PyGan, by adding or modifying them in your .profile.perso file :
 
@@ -70,9 +70,9 @@ Cloning PyDrag project
 
 You can either clone the project through a direct HTTP protocole (if you are on FARUX) or by downloading the project as an archive.
 
----------------------------
+--------------------------------
 Cloning through HTTP protocole
----------------------------
+--------------------------------
 
 1. Clone the PyDrag project from PICOCS into your local machine with the HTTP protocole :
 
@@ -103,9 +103,9 @@ Cloning through an archive
 	tar -xvzf dragor-DRAGOR-V2.1.tgz
 
 
----------------------------
+-----------------------------------------
 Manage the Python virtual environnement
----------------------------
+-----------------------------------------
 
 You will need Python3 to use PyDrag, as well as the built-in modules "os", "math", "sys" and the module "numpy". To ensure these requirements, you have to create a virtual environnement (unless you already have one).
 1. Create and enable a virtual environnement with virtualenv (see [Virtual environnement configuration](http://peanuts:8080/bin/view/Informatique/Python/) )
@@ -119,9 +119,9 @@ You will need Python3 to use PyDrag, as well as the built-in modules "os", "math
 
 Now, you should have the PyDrag project cloned into your system and all necessary official Python modules.
 
----------------------------
+-----------------------------------------
 Installing and compiling Version5
----------------------------
+-----------------------------------------
 
 PyDrag is based on PyGan libraries from Version5 (currently, distribution number v5bev2761). You will need DRAGON-related codes and sources. There are two different situations :
  - you want to work with the original Version5 distribution. Then, you can use the ./src/Version5/ folder, containing every sources from this distribution (that is no longer available online). Use the following commands :
@@ -175,9 +175,9 @@ PyDrag is using PyGan to create a communication between DRAGON and Python. This 
 It means that developping PyDrag may require a significant amount of RAM (for exemple, if you do not delete memory-located LCM variables) : therefore, it is highly recommanded to test and develop scripts on a Slurm node using "qrsh" for nominal evolution calculations.
 However, as SAPHYB/MULTICOMPO calculations are usually requiring thousands of branches (e.q thousands of calculation points), it is expected for the calculation (performed through a qrsh connection) to crash due to the limited allocated memory.
 
-==========================
+===========================
 Start a PyDrag calculation
-==========================
+===========================
 
 It is possible to start a PyDrag calculation through two ways (using Tihange input as an exemple) :
 
