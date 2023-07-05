@@ -20,5 +20,7 @@ Contents
 
    usage
    api
+   limits
+
 
 Lumache has its documentation hosted on Read the Docs.
