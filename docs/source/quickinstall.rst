@@ -108,6 +108,7 @@ Manage the Python virtual environnement
 -----------------------------------------
 
 You will need Python3 to use PyDrag, as well as the built-in modules "os", "math", "sys" and the module "numpy". To ensure these requirements, you have to create a virtual environnement (unless you already have one).
+
 1. Create and enable a virtual environnement with virtualenv (see [Virtual environnement configuration](http://peanuts:8080/bin/view/Informatique/Python/) )
 
 2. Install all the required official Python packages (numpy, os, math, sys)
@@ -124,6 +125,7 @@ Installing and compiling Version5
 -----------------------------------------
 
 PyDrag is based on PyGan libraries from Version5 (currently, distribution number v5bev2761). You will need DRAGON-related codes and sources. There are two different situations :
+
  - you want to work with the original Version5 distribution. Then, you can use the ./src/Version5/ folder, containing every sources from this distribution (that is no longer available online). Use the following commands :
 
 	.. code-block:: sh
@@ -135,21 +137,21 @@ PyDrag is based on PyGan libraries from Version5 (currently, distribution number
 		make
 		make clean
 
-
  - you want to work on your own distribution : you need to download the chosen archive from [Version5](http://merlin.polymtl.ca/development.htm) and compile it
  
 	1. Download the latest TAR archive of Version5 and place it wherever you need
+
 	2. Use the next commands (detailled here for the revision ev2761 and must be adapted to your revision number) :
 	
-	.. code-block:: sh
+		.. code-block:: sh
 
-		tar -xvzf Version5.0.8_ev2761.tgz
-		cd Version5.0.8_ev2761/Donjon/
-		make
-		make clean
-		cd ../Pygan/
-		make
-		make clean
+			tar -xvzf Version5.0.8_ev2761.tgz
+			cd Version5.0.8_ev2761/Donjon/
+			make
+			make clean
+			cd ../Pygan/
+			make
+			make clean
 
 By default, using the 'make' command in Donjon folder allows your system to compile Donjon code and all its depedencies. If there is any problem, you can try to make this process for each codes (in this exact order) : Utilib, Ganlib, Dragon, Donjon, PyGan.
 
@@ -183,17 +185,17 @@ It is possible to start a PyDrag calculation through two ways (using Tihange inp
 
   - using the "pydrag" launching script by calling it with the name of chosen input (located in /data/ folder). It is possible to start the calculation on slurm by using the "-s" argument (which will start the calculation in the local ./tmp/ folder) :
 
-.. code-block:: sh
+	.. code-block:: sh
 
-	./pydrag -s Tihange.py
+		./pydrag -s Tihange.py
 
 This command allows to store every PyGan-related informations into a txt file. However, it may be needed to manually delete the /tmp/ folder, as the slurm execution script can not delete the folder where it has been created.
 
   - directly starting the chosen input with 
-  .. code-block:: sh
+ 	 .. code-block:: sh
 
-	cd ./data/
-	python -i Tihange.py
+		cd ./data/
+		python -i Tihange.py
 
 The "-i" argument allows the user to keep the console open in order to interact with every objects such as results, LCM objets and classes.
 
