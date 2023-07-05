@@ -54,11 +54,13 @@ Setting your environnement variables
 ---------------------------
 
 First, you need to set some variables used by Version5 and PyGan, by adding or modifying them in your .profile.perso file :
-```bash
-export FORTRANPATH=/soft/gcc/7.3.0/lib64/ #path to your gcc compiler library
-export HDF5_API=/usr/lib64/               #path to your HDF5 library
-module load gcc/7.3.0
-```
+
+.. code-block:: sh
+
+	export FORTRANPATH=/soft/gcc/7.3.0/lib64/ #path to your gcc compiler library
+	export HDF5_API=/usr/lib64/               #path to your HDF5 library
+	module load gcc/7.3.0
+
 
 This exemple works for FARUX users, but may be adapted to your own system architecture if it differs. Once it is done, re-source your .profile.perso file.
 
@@ -73,14 +75,18 @@ Cloning through HTTP protocole
 ---------------------------
 
 1. Clone the PyDrag project from PICOCS into your local machine with the HTTP protocole :
-```bash
-git clone http://picocs.neutron.intra.irsn.fr/orion/dragor.git .
-```
+
+.. code-block:: sh
+
+	git clone http://picocs.neutron.intra.irsn.fr/orion/dragor.git .
+
 	
 2. It may be required to change branch from "master" (DRAGOR-V1.3) to "DRAGOR-V2.1" (the one under developpement) :
-```bash
-git checkout DRAGOR-V2.1
-```
+
+.. code-block:: sh
+	
+	git checkout DRAGOR-V2.1
+
 
 ---------------------------
 Cloning through an archive
@@ -91,9 +97,11 @@ Cloning through an archive
 2. Place the archive in the folder of your choice
 
 3. Unzip it with :
-```bash
-tar -xvzf dragor-DRAGOR-V2.1.tgz
-```
+
+.. code-block:: sh
+
+	tar -xvzf dragor-DRAGOR-V2.1.tgz
+
 
 ---------------------------
 Manage the Python virtual environnement
@@ -103,9 +111,11 @@ You will need Python3 to use PyDrag, as well as the built-in modules "os", "math
 1. Create and enable a virtual environnement with virtualenv (see [Virtual environnement configuration](http://peanuts:8080/bin/view/Informatique/Python/) )
 
 2. Install all the required official Python packages (numpy, os, math, sys)
-```bash
-pip install -r requirements.txt
-```
+
+.. code-block:: sh
+
+	pip install -r requirements.txt
+
 
 Now, you should have the PyDrag project cloned into your system and all necessary official Python modules.
 
@@ -115,39 +125,45 @@ Installing and compiling Version5
 
 PyDrag is based on PyGan libraries from Version5 (currently, distribution number v5bev2761). You will need DRAGON-related codes and sources. There are two different situations :
  - you want to work with the original Version5 distribution. Then, you can use the ./src/Version5/ folder, containing every sources from this distribution (that is no longer available online). Use the following commands :
-	```bash
-	cd ./src/Version5/Donjon/
-	make
-	make clean
-	cd ../Pygan/
-	make
-	make clean
-	```
+
+	.. code-block:: sh
+
+		cd ./src/Version5/Donjon/
+		make
+		make clean
+		cd ../Pygan/
+		make
+		make clean
+
 
  - you want to work on your own distribution : you need to download the chosen archive from [Version5](http://merlin.polymtl.ca/development.htm) and compile it
  
 	1. Download the latest TAR archive of Version5 and place it wherever you need
 	2. Use the next commands (detailled here for the revision ev2761 and must be adapted to your revision number) :
-	```bash
-	tar -xvzf Version5.0.8_ev2761.tgz
-	cd Version5.0.8_ev2761/Donjon/
-	make
-	make clean
-	cd ../Pygan/
-	make
-	make clean
-	```
-	By default, using the 'make' command in Donjon folder allows your system to compile Donjon code and all its depedencies. If there is any problem, you can try to make this process for each codes (in this exact order) : Utilib, Ganlib, Dragon, Donjon, PyGan.
+	
+	.. code-block:: sh
+
+		tar -xvzf Version5.0.8_ev2761.tgz
+		cd Version5.0.8_ev2761/Donjon/
+		make
+		make clean
+		cd ../Pygan/
+		make
+		make clean
+
+By default, using the 'make' command in Donjon folder allows your system to compile Donjon code and all its depedencies. If there is any problem, you can try to make this process for each codes (in this exact order) : Utilib, Ganlib, Dragon, Donjon, PyGan.
 
 ---------------------------
 Sourcing PyGan libraries
 ---------------------------
 
 Source the PyGan library path in your .profile.perso file by adding the path to PyGan python libraries :
-```bash
-export PYTHONPATH=[my_personnal_folder]/src/Version5/PyGan/lib/Linux_x86_64/python/
-```
-where 'my_personnal_folder' is the path to the folder containing PyDrag project.
+
+.. code-block:: sh
+
+	export PYTHONPATH=[my_personnal_folder]/src/Version5/PyGan/lib/Linux_x86_64/python/
+
+where '[my_personnal_folder]' is the path to the folder containing PyDrag project.
 At this step, you should have cloned PyDrag project, installed all Python dependencies and compiled/sourced PyGan.
 
 ==========================
@@ -166,16 +182,19 @@ Start a PyDrag calculation
 It is possible to start a PyDrag calculation through two ways (using Tihange input as an exemple) :
 
   - using the "pydrag" launching script by calling it with the name of chosen input (located in /data/ folder). It is possible to start the calculation on slurm by using the "-s" argument (which will start the calculation in the local ./tmp/ folder) :
-  ```bash
-./pydrag -s Tihange.py
-```
+
+.. code-block:: sh
+
+	./pydrag -s Tihange.py
+
 This command allows to store every PyGan-related informations into a txt file. However, it may be needed to manually delete the /tmp/ folder, as the slurm execution script can not delete the folder where it has been created.
 
   - directly starting the chosen input with 
-  ```bash
-cd ./data/
-python -i Tihange.py
-```
+  .. code-block:: sh
+
+	cd ./data/
+	python -i Tihange.py
+
 The "-i" argument allows the user to keep the console open in order to interact with every objects such as results, LCM objets and classes.
 
 ==========================
