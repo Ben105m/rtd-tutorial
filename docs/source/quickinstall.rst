@@ -13,18 +13,18 @@ Sources
 ---------------------------
 
 Following documents have been used to write this README :
-- [Version5 distributions](http://merlin.polymtl.ca/development.htm)
-- [PyGan guide](http://merlin.polymtl.ca/downloads/IGE332.pdf)
-- [Virtual environnement configuration](http://peanuts:8080/bin/view/Informatique/Python/)
+- `Version5 distributions <http://merlin.polymtl.ca/development.htm>`_
+- `PyGan guide <http://merlin.polymtl.ca/downloads/IGE332.pdf>`_
+- `Virtual environnement configuration <http://peanuts:8080/bin/view/Informatique/Python/>`_
 
 ---------------------------
 Contacts
 ---------------------------
 
 If you have problems, questions, or improvements for PyDrag, you may contact following users :
-- [SALINO Vivian](mailto:vivian.salino@irsn.fr)
-- [BENEDET Benjamin](mailto:benjamin.benedet@uranus-tech.net)
-- [TAFOREAU Julien](mailto:julien.taforeau@irsn.fr)
+- `SALINO Vivian <mailto:vivian.salino@irsn.fr>`_
+- `TAFOREAU Julien <mailto:julien.taforeau@irsn.fr>`_
+- `BENEDET Benjamin <mailto:benjamin.benedet@uranus-tech.net>`_
 
 ---------------------------
 Developpement environnement
