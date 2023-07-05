@@ -18,8 +18,6 @@ Contents
 
 .. toctree::
 
-   usage
-   api
    quickinstall
 
 
