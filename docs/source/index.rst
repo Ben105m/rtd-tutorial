@@ -20,6 +20,7 @@ Contents
 
    usage
    api
+   quickinstall
 
 
 Lumache has its documentation hosted on Read the Docs.
