@@ -12,7 +12,7 @@ It is possible to start a PyDrag calculation through two ways (using Tihange inp
 
 		./pydrag -s Tihange.py
 
-This command allows to store every PyGan-related informations into a txt file. However, it may be needed to manually delete the /tmp/ folder, as the slurm execution script can not delete the folder where it has been created.
+	This command allows to store every PyGan-related informations into a txt file. However, it may be needed to manually delete the /tmp/ folder, as the slurm execution script can not delete the folder where it has been created.
 
   - directly starting the chosen input with 
  	 .. code-block:: sh
@@ -20,4 +20,4 @@ This command allows to store every PyGan-related informations into a txt file. H
 		cd ./data/
 		python -i Tihange.py
 
-The "-i" argument allows the user to keep the console open in order to interact with every objects such as results, LCM objets and classes.
+	The "-i" argument allows the user to keep the console open in order to interact with every objects such as results, LCM objets and classes.
