@@ -62,7 +62,7 @@ Manage the Python virtual environnement
 
 You will need Python3 to use PyDrag, as well as the built-in modules "os", "math", "sys" and the module "numpy". To ensure these requirements, you have to create a virtual environnement (unless you already have one).
 
-1. Create and enable a virtual environnement with virtualenv (see [Virtual environnement configuration](http://peanuts:8080/bin/view/Informatique/Python/) )
+1. Create and enable a virtual environnement with virtualenv (see `Virtual environnement configuration <http://peanuts:8080/bin/view/Informatique/Python/>`_ )
 
 2. Install all the required official Python packages (numpy, os, math, sys)
 
@@ -91,7 +91,7 @@ PyDrag is based on PyGan libraries from Version5 (currently, distribution number
 		make clean
 
 
- - you want to work on your own distribution : you need to download the chosen archive from [Version5](http://merlin.polymtl.ca/development.htm) and compile it
+ - you want to work on your own distribution : you need to download the chosen archive from `Version5 <http://merlin.polymtl.ca/development.html>`_ and compile it
  
 	1. Download the latest TAR archive of Version5 and place it wherever you need
 
