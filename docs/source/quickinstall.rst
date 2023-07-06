@@ -3,14 +3,6 @@
 This is the documentation about PyDrag project installation with all required dependencies. Some additional guidelines are also given.
 This guide has been written for Version5 revisions 5.0.7 and 5.0.8.
 
-PyDrag is developped under the following environnement:
-
-- CentOS Linux release 7.8.2003 (Core)
-
-- GCC version 7.3.0
-
-- anaconda3 base environnement + Python 3.6.8 through virtualenv 20.17.0
-
 ==========================
 Installation of PyDrag
 ==========================
