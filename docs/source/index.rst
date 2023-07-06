@@ -5,7 +5,7 @@ Welcome to PyDrag's documentation!
 More informations about the technologies used for this project can be found in the :doc:`documentation` section.
 In case of troubles, you can refer to :doc:`contact` page.
 
-Check out the :doc:`quickinstall` section for further information.
+Check out the :doc:`quickinstall` section for further information. The :doc:`quickstart` page gives details about the project architecture and teach you how to start a calculation.
 
 .. note::
 
@@ -17,6 +17,7 @@ Contents
 .. toctree::
 
    quickinstall
+   quickstart
    documentation
    contact
 
