@@ -90,6 +90,7 @@ PyDrag is based on PyGan libraries from Version5 (currently, distribution number
 		make
 		make clean
 
+
  - you want to work on your own distribution : you need to download the chosen archive from [Version5](http://merlin.polymtl.ca/development.htm) and compile it
  
 	1. Download the latest TAR archive of Version5 and place it wherever you need
@@ -105,6 +106,7 @@ PyDrag is based on PyGan libraries from Version5 (currently, distribution number
 			cd ../Pygan/
 			make
 			make clean
+
 
 By default, using the 'make' command in Donjon folder allows your system to compile Donjon code and all its depedencies. If there is any problem, you can try to make this process for each codes (in this exact order) : Utilib, Ganlib, Dragon, Donjon, PyGan.
 
