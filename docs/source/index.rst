@@ -1,10 +1,9 @@
-Welcome to Lumache's documentation!
+Welcome to PyDrag's documentation!
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+**PyDrag** is a calculation scheme made with Python and deterministic code DRAGON.
+More informations about the technologies used for this project can be found in the :doc:`documentation` section.
+In case of troubles, you can refer to :doc:`contact` page.
 
 Check out the :doc:`quickinstall` section for further information.
 
@@ -17,7 +16,8 @@ Contents
 
 .. toctree::
 
+   documentation
    quickinstall
 
 
-Lumache has its documentation hosted on Read the Docs.
+PyDrag has its documentation hosted on Read the Docs.
