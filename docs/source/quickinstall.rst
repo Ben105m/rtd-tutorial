@@ -1,14 +1,14 @@
 .. _quickinstall:
 
+================================
+PyDrag installation guide
+================================
+
 This is the documentation about PyDrag project installation with all required dependencies. Some additional guidelines are also given.
 This guide has been written for Version5 revisions 5.0.7 and 5.0.8.
 
-==========================
-Installation of PyDrag
-==========================
-
 -------------------------------------
-Setting your environnement variables
+Setting environnement variables
 -------------------------------------
 
 First, you need to set some variables used by Version5 and PyGan, by adding or modifying them in your .profile.perso file :
@@ -26,11 +26,8 @@ This exemple works for FARUX users, but may be adapted to your own system archit
 Cloning PyDrag project
 ---------------------------
 
-You can either clone the project through a direct HTTP protocole (if you are on FARUX) or by downloading the project as an archive.
-
---------------------------------
-Cloning through HTTP protocole
---------------------------------
+You can either clone the project through a direct HTTP protocole or by downloading the project as an archive.
+If you want to use the HTTP protocole:
 
 1. Clone the PyDrag project from PICOCS into your local machine with the HTTP protocole :
 
@@ -46,11 +43,9 @@ Cloning through HTTP protocole
 	git checkout DRAGOR-V2.1
 
 
----------------------------
-Cloning through an archive
----------------------------
+Otherwise, if you want to download the archive :
 
-1. Download the PyDrag project from PICOCS as a TAR (or TGZ) archive (be careful with the branch of the project you want to download!)
+1. Download the PyDrag project from GitLab as a TAR (or TGZ) archive (be careful with the branch of the project you want to download!)
 
 2. Place the archive in the folder of your choice
 
@@ -125,43 +120,3 @@ Source the PyGan library path in your .profile.perso file by adding the path to 
 
 where '[my_personnal_folder]' is the path to the folder containing PyDrag project.
 At this step, you should have cloned PyDrag project, installed all Python dependencies and compiled/sourced PyGan.
-
-==========================
-Utility guidelines
-==========================
-
-PyDrag is using PyGan to create a communication between DRAGON and Python. This allows python code to access/store some memory-located LCM objects, usually manipulated by DRAGON/DONJON. It grants (more or less direct) access to them in a Python script. 
-
-It means that developping PyDrag may require a significant amount of RAM (for exemple, if you do not delete memory-located LCM variables) : therefore, it is highly recommanded to test and develop scripts on a Slurm node using "qrsh" for nominal evolution calculations.
-However, as SAPHYB/MULTICOMPO calculations are usually requiring thousands of branches (e.q thousands of calculation points), it is expected for the calculation (performed through a qrsh connection) to crash due to the limited allocated memory.
-
-===========================
-Start a PyDrag calculation
-===========================
-
-It is possible to start a PyDrag calculation through two ways (using Tihange input as an exemple) :
-
-  - using the "pydrag" launching script by calling it with the name of chosen input (located in /data/ folder). It is possible to start the calculation on slurm by using the "-s" argument (which will start the calculation in the local ./tmp/ folder) :
-
-	.. code-block:: sh
-
-		./pydrag -s Tihange.py
-
-This command allows to store every PyGan-related informations into a txt file. However, it may be needed to manually delete the /tmp/ folder, as the slurm execution script can not delete the folder where it has been created.
-
-  - directly starting the chosen input with 
- 	 .. code-block:: sh
-
-		cd ./data/
-		python -i Tihange.py
-
-The "-i" argument allows the user to keep the console open in order to interact with every objects such as results, LCM objets and classes.
-
-==========================
-Non-regression protocole
-==========================
-
-Each input ends with a non-regression section. These sections contain reference kinf value, which are compared to the nominal evolution kinf obtained with the calculation scheme. The references come from calculations made with DRAGOR-V1.3, with Version5 distribution 5.0.7 (ev2068) and using nuclear data library CEA93.V7 with 172 energy groups.
-Reference results were made with the different available calculation parameters (control rods type, fuel type, enrichment value, ...). These kinf are then called through pydrag.non_regression function, that displays the results for each burnup step in addtion with the kinf difference (in pcm). A warning message is displayed if the difference is higher than a chosen threshold (default:0.5 pcm). It is possible to create a txt file in the chosen location that stores those results.
-
-Obviously, it is possible to comment/delete these sections if they are not required.
