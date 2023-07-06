@@ -1,4 +1,4 @@
-.._nonregression:
+.. _nonregression:
 
 ==========================
 Non-regression protocole
