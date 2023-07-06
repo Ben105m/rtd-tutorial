@@ -1,8 +1,8 @@
 .._documentation:
 
-==========================
-Informations and sources
-==========================
+================
+Sources
+================
 
 Following documents have been used to write this guide :
 
