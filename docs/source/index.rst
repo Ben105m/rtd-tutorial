@@ -18,6 +18,7 @@ Contents
 
    quickinstall
    quickstart
+   nonregression
    documentation
    contact
 
