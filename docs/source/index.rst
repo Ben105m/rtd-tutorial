@@ -16,8 +16,9 @@ Contents
 
 .. toctree::
 
-   documentation
    quickinstall
+   documentation
+   contact
 
 
 PyDrag has its documentation hosted on Read the Docs.
