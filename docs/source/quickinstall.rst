@@ -21,18 +21,6 @@ Following documents have been used to write this README :
 - `Virtual environnement configuration <http://peanuts:8080/bin/view/Informatique/Python/>`_
 
 
----------------------------
-Contacts
----------------------------
-
-If you have problems, questions, or improvements for PyDrag, you may contact following users :
-
-- `SALINO Vivian <mailto:vivian.salino@irsn.fr>`_
-
-- `TAFOREAU Julien <mailto:julien.taforeau@irsn.fr>`_
-
-- `BENEDET Benjamin <mailto:benjamin.benedet@uranus-tech.net>`_
-
 -----------------------------
 Developpement environnement
 -----------------------------
