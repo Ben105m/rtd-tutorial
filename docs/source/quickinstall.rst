@@ -2,28 +2,6 @@
 
 This is the documentation about PyDrag project installation with all required dependencies. Some additional guidelines are also given.
 This guide has been written for Version5 revisions 5.0.7 and 5.0.8.
-PyDrag is developped on FARUX (CentOS 7.8.2003) with Python3.6.8.
-
-==========================
-Informations and sources
-==========================
-
----------------------------
-Sources
----------------------------
-
-Following documents have been used to write this README :
-
-- `Version5 distributions <http://merlin.polymtl.ca/development.htm>`_
-
-- `PyGan guide <http://merlin.polymtl.ca/downloads/IGE332.pdf>`_
-
-- `Virtual environnement configuration <http://peanuts:8080/bin/view/Informatique/Python/>`_
-
-
------------------------------
-Developpement environnement
------------------------------
 
 PyDrag is developped under the following environnement:
 
