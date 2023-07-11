@@ -6,18 +6,25 @@ Objetcs, functions and methods
 
 PyDrag is manipulating different objects, each containing different kinds of informations :
 
+  - :ref:`library` : contains all the available informations for the chosen nuclear data library. The user does not need to directly interact with it, as the library type, the isotopes contained inside, and the nuclear data are automatically extracted with PyDrag ;
+
   -  :ref:`mix` : contains mixture's informations, such as temperature, linear expansion coefficient, compositions. These objects are pre-defined in PyDrag, and it is important to keep their name for the calculation ;
 
-  -  :ref:`grids` : contains the description of the assembly grids ;
+  - :ref:`grids` : contains the description of the assembly grids ;
 
-  - :ref:`materials` : contains all the data related to mixtures. Among others, it includes "Library", :ref:`grids` and every existing :ref:`mix` (as sub-classes) ; 
+  - :ref:`materials` : contains all the data related to mixtures. Among others, it includes :ref:`library`, :ref:`grids` and every existing :ref:`mix` (as sub-classes) ; 
 
-  - "Geometry" object : describes the assembly geometry, such as the pin layout, the different dimensions, and the mixtures overlay of each pin ;
+  - :ref:`geometry` : describes the assembly geometry, such as the pin layout, the different dimensions, and the mixtures overlay of each pin ;
 
-  - "Library" object : contains all the available informations for the chosen nuclear data library. The user does not need to directly interact with it, as the library type, the isotopes contained inside, and the nuclear data are automatically extracted with PyDrag ;
+  - :ref:`power` : it is used to automatically computes the assembly power density (specifically used for evolution calculations) ;
 
-  - "Power" object : it is used to automatically computes the assembly power density (specifically used for evolution calculations) ;
 
+.. _library:
+
+"Library" object
+----------------------------
+
+TO BE COMPLETED
 
 .. _mix:
 
@@ -37,6 +44,20 @@ TO BE COMPLETED
 .. _materials:
 
 "Material" object
+----------------------------
+
+TO BE COMPLETED
+
+.. _geometry:
+
+"Geometry" object
+----------------------------
+
+TO BE COMPLETED
+
+.. _power:
+
+"Power" object
 ----------------------------
 
 TO BE COMPLETED
