@@ -34,7 +34,7 @@ The "Mix" objects are used to define the mixtures used for the calculation. By d
 TO BE COMPLETED
 
 
-.. materials:
+.. _materials:
 
 "Material" object
 ----------------------------
