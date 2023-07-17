@@ -1,15 +1,15 @@
 .. _quickinstall:
 
-================================
+######################################
 PyDrag installation guide
-================================
+######################################
 
 This is the documentation about PyDrag project installation with all required dependencies. Some additional guidelines are also given.
 This guide has been written for Version5 revisions 5.0.7 and 5.0.8.
 
--------------------------------------
+***********************************
 Setting environnement variables
--------------------------------------
+***********************************
 
 First, you need to set some variables used by Version5 and PyGan, by adding or modifying them in your .profile.perso file :
 
@@ -22,9 +22,9 @@ First, you need to set some variables used by Version5 and PyGan, by adding or m
 
 This exemple works for FARUX users, but may be adapted to your own system architecture if it differs. Once it is done, re-source your .profile.perso file.
 
----------------------------
+***********************************
 Cloning PyDrag project
----------------------------
+***********************************
 
 You can either clone the project through a direct HTTP protocole or by downloading the project as an archive.
 If you want to use the HTTP protocole:
@@ -56,9 +56,9 @@ Otherwise, if you want to download the archive :
 	tar -xvzf dragor-DRAGOR-V2.1.tgz
 
 
------------------------------------------
+**********************************************************************
 Manage the Python virtual environnement
------------------------------------------
+**********************************************************************
 
 You will need Python3 to use PyDrag, as well as the built-in modules "os", "math", "sys" and the module "numpy". To ensure these requirements, you have to create a virtual environnement (unless you already have one).
 
@@ -73,9 +73,9 @@ You will need Python3 to use PyDrag, as well as the built-in modules "os", "math
 
 Now, you should have the PyDrag project cloned into your system and all necessary official Python modules.
 
------------------------------------------
+**********************************************************************
 Installing and compiling Version5
------------------------------------------
+**********************************************************************
 
 PyDrag is based on PyGan libraries from Version5 (currently, distribution number v5bev2761). You will need DRAGON-related codes and sources. There are two different situations :
 
@@ -110,9 +110,9 @@ PyDrag is based on PyGan libraries from Version5 (currently, distribution number
 
 By default, using the 'make' command in Donjon folder allows your system to compile Donjon code and all its depedencies. If there is any problem, you can try to make this process for each codes (in this exact order) : Utilib, Ganlib, Dragon, Donjon, PyGan.
 
----------------------------
+***********************************
 Sourcing PyGan libraries
----------------------------
+***********************************
 
 Source the PyGan library path in your .profile.perso file by adding the path to PyGan python libraries :
 
