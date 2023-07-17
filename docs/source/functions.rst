@@ -27,14 +27,24 @@ The next chapters detail the different objects handled by PyDrag, and describe t
 
 TO BE COMPLETED
 
+Description
+============
+
+Methods
+==========
+
 .. _mix:
 
 "Mix" object
 ******************
 
+Description
+============
+
 The "Mix" objects are used to define the mixtures used for the calculation. By default, PyDrag is creating a list of pre-defined elements (based on common isotopic abundances), later used to create mixtures. The pre-defined mixtures have a fixed name, making them easier to handle by the code and directly callable in the input. However, it is possible for the user to create their own mixtures, duplicating existing mixtures, and such. The pre-definde mixtures are :  SS304, Inconel, Zr4, M5, AIC, B4C, Pyrex, Hf, water, Air, void, Gd, UO2, MOX.
 
-
+Methods
+==========
 
 
 .. _grids:
@@ -44,6 +54,11 @@ The "Mix" objects are used to define the mixtures used for the calculation. By d
 
 TO BE COMPLETED
 
+Description
+============
+
+Methods
+==========
 
 .. _materials:
 
@@ -52,6 +67,12 @@ TO BE COMPLETED
 
 TO BE COMPLETED
 
+Description
+============
+
+Methods
+==========
+
 .. _geometry:
 
 "Geometry" object
@@ -59,9 +80,21 @@ TO BE COMPLETED
 
 TO BE COMPLETED
 
+Description
+============
+
+Methods
+==========
+
 .. _power:
 
 "Power" object
 *********************
 
 TO BE COMPLETED
+
+Description
+============
+
+Methods
+==========
