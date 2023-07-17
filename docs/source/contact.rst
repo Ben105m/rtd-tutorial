@@ -1,8 +1,8 @@
 .. _contact:
 
-===============
+###########
 Contacts
-===============
+###########
 
 If you have any question, improvement suggestion or problem, you can contact one of the following PyDrag developpers :
 
@@ -13,9 +13,9 @@ If you have any question, improvement suggestion or problem, you can contact one
 - `Hermann <mailto:hermann>`_
 
 
-====================
+##################
 Developping team
-====================
+##################
 
 PyDrag project received contributions from a lot of different developpers, engineers and physicists :
 
