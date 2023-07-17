@@ -46,6 +46,17 @@ The "Mix" objects are used to define the mixtures used for the calculation. By d
 Methods
 ==========
 
+set_natural_elements()
+-------------------------
+
+set_natural_abundance()
+-------------------------
+
+set_molar_mass()
+-------------------------
+
+set_compounds()
+-------------------------
 
 .. _grids:
 
