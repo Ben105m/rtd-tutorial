@@ -1,8 +1,8 @@
 .. _documentation:
 
-================
+###################
 Sources
-================
+###################
 
 Following documents have been used to write this guide :
 
