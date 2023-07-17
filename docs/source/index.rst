@@ -22,6 +22,7 @@ Contents
    functions
    nonregression
    documentation
+   hypothesis
    contact
 
 
