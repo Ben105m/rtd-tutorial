@@ -25,4 +25,4 @@ Contents
    contact
 
 
-PyDrag has its documentation hosted on Read the Docs.
+PyDrag has its documentation hosted on Read the Docs. This is a test version of the project's documentation.
