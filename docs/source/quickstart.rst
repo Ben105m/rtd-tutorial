@@ -1,8 +1,8 @@
 .. _quickstart:
 
-================================
+################################
 Starting a PyDrag calculation
-================================
+################################
 
 It is possible to start a PyDrag calculation through two ways (using Tihange input as an exemple here) :
 
