@@ -1,5 +1,5 @@
 Welcome to PyDrag's documentation!
-===================================
+####################################
 
 **PyDrag** is a calculation scheme made with Python and deterministic code DRAGON.
 More informations about the technologies used for this project can be found in the :doc:`documentation` section.
@@ -12,7 +12,7 @@ Check out the :doc:`quickinstall` section for further information. The :doc:`qui
    This project is under active development.
 
 Contents
---------
+==========
 
 .. toctree::
    :maxdepth: 1
