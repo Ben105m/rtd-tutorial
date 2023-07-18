@@ -29,13 +29,64 @@ The next chapters detail the different objects handled by PyDrag, and describe t
 "Library" object
 **********************
 
-TO BE COMPLETED
-
 Description
 ============
 
+This class contains all the informations related to the chosen nuclear data library. It is created when calling the "Material" class, such as:
+
+.. code-block:: Python
+
+  materials = pydrag.Materials(NuclearData = 'https://github.com/IRSN/PyNjoy2016/releases/download/JEFF-3.x/drglibJEFF-3.1.1')
+
+The "Library" class is able to identify internet adress (as long as it starts by "http") in order to download any library. For now, PyDrag can only download libraries from a Git repository. It is also possible to give the absolute path to this library (if it is located locally) or a symbolic link. In any case, PyDrag will create a new symbolic link named "MyLib", which is deleted at every restart (if it does exist). Moreover, PyDrag can handle different types of library, as long as they are APLIB2, APXSM or DRAGLIB.
+
 Methods
 ==========
+
+get_lib_type()
+-------------------------
+
+Get the library type, using the c2m procedure "GetLibType.c2m". It calls the LIB module while specificating a library type, looping through the three handlable types : "DRAGON", "APLIB2" and "APXSM". Obviously, if none of those type is right (or if the library is not readable), the calculation will stop.
+
+get_isotope_list()
+-------------------------
+
+Recover the list of all the avaiable non-self-shielded isotopes' names in the chosen library.
+
+get_energy_group()
+-------------------------
+
+Recover the energy group number considered in the chosen library, using the c2m procedures "GetEnergyGr.c2m" and "GetNRG.c2m". This information is used in order to define the self-shielding routine.
+
+.. note::
+
+  The "GetNRG" is calling LIB: module, and needs to know at least one isotope from the library. In consequence, this function can not be called before "get_isotope_list()".
+
+get_isotope_name()
+-------------------------
+
+Check for any correspondance between a "user-defined" isotope's name and the library isotopes' names. For instance, it allows to link the user-defined isotope "Fe56" with its codename in the library (which can be "FE56_3" or anything else, depending on the library).
+
+get_SS_isotope_list()
+-------------------------
+
+Recover the list of every available self-shielded isotopes in the chosen library.
+
+.. note::
+
+  This method is a bit different from the others. In fact, it is impossible (for now) to directly recover this list of names in a c2m procedure, as DRAGON only displays it in an output file (or in the terminal). This methods calls another dedicated python script (called "get_SS_isot.py") in order to execute the c2m procedure "GetSSIsot.c2m" and recovers the informations from the terminal.
+
+It is mandatory to make a LIB: module call to get these informations : consequently, the name of at least one isotope from the library is required. This method can not be called before the "get_isotope_list()".
+
+get_real_isot_name()
+-------------------------
+
+Check for any correspondance between a "user-defined" isotope's name and the library isotopes' names. **This function is used for specific isotopes (such as Mo95), for non-regression purpose.**
+
+get_molar_mass()
+-------------------------
+
+Recover the molar masses of every available isotopes in chosen library. A correction is made in order to recover the right isotopic molar masses. In fact, the available libraries do not contain any direct mentions to the molar masses, and store the isotopic average weight ratio (AWR, which are the ratio of each isotope mass divided by the neutron mass). Moreover, as the isotopic neutron masses are not stored, the natural carbon mass (known, and set to 12.011 according to the NIST value) is used with the stored carbone AWR. The ratio of those two factors gives the corrective factor, applied on every AWRs.
 
 .. _mix:
 
