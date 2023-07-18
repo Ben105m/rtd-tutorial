@@ -20,6 +20,10 @@ PyDrag is manipulating different objects, each containing different kinds of inf
 
 The next chapters detail the different objects handled by PyDrag, and describe the existing methods. The method's (current) limitations are clearly defined.
 
+.. warning::
+
+  Each comment encapsulated in a warning box refers to an approximation used for non-regression purpose. Those mistakes will be removed later. 
+
 .. _library:
 
 "Library" object
@@ -49,7 +53,7 @@ Methods
 set_natural_elements()
 -------------------------
 
-Set a pre-defined list of natural elements compositions. 
+Pre-define a list of natural elements compositions. 
 Each element is named after its chemical symbol, then followed by the locution "Nat".
 For exemple :
 
@@ -61,30 +65,61 @@ chrome                CrNat
 sulfur                SNat 
 ==================  ====================
 
-.. note::
+.. warning::
 
   The isotope Gd152 is not taken into account in the natural gadolinium composition (and replaced by Gd154).
   Moreover, the natural aliminium composition is different when using an APXSM-formatted nuclear data library.
 
-
-
 set_natural_abundance()
 -------------------------
+
+Set the isotopic abundances of the chosen natural element.
 
 set_molar_mass()
 -------------------------
 
+Set the molar mass of the chosen natural element.
+
 set_compounds()
 -------------------------
+
+Pre-define a list of chemical compounds.
+
+.. note::
+
+  The pre-defined compounds are B2O3, SiO2, Al2O3, Na2O, Gd2O3 and H2O.
 
 add_compounds()
 -------------------------
 
+Add a user-defined chemical compound. 
+
 add_element()
 -------------------------
 
+Add a user-defined natural element.
+
+.. note::
+
+  This method can be used to update the isotopic abundances of an existing element.
+
 load_composition()
 -------------------------
+
+Load all the defined natural elements and mixtures' compositions into the object. This method follows these steps :
+
+1) Recover the isotopes' molar masses from the library
+2) Check for any missing isotopes by listing all the pre-defined ones. If an isotope is missing in the library, it is replaced by the N+2 isotope.
+3) Compute the natural elements' molar masses (or recover these molar masses if they do exist in the library)
+4) Compute the atomic densities of each mixtures
+
+.. warning::
+
+  The silicium molar mass is equal the Si28 molar mass. The molybdenum molar mass is equel to the Mo95 molar mass.
+
+.. note::
+
+  This method is used to update the mixtures/elements every time the user modifies the default caracteristics.
 
 set_tfuel()
 -------------------------
