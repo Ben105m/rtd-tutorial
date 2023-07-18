@@ -55,13 +55,14 @@ Set a pre-defined list of natural elements compositions.
 
 	Each element is named after its chemical symbol, then followed by the locution "Nat".
 	For exemple :
-==================  ====================
-Element name        Name in PyDrag
-==================  ====================
-iron                  FeNat
-chrome                CrNat
-sulfur                SNat 
-==================  ====================
+=====  =====  =======
+  A      B    A and B
+=====  =====  =======
+False  False  False
+True   False  False
+False  True   False
+True   True   True
+=====  =====  =======
 
 set_natural_abundance()
 -------------------------
