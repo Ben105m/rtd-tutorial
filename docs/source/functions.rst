@@ -139,9 +139,9 @@ Pre-define the default mixtures' compositions.
 
   Default mixtures' name are :
 
-=====================  ====================
+=====================  =======================
 Common name              Pydrag mixture name
-=====================  ====================
+=====================  =======================
 Stainless Steel 304      SS304
 Inconel                  Inconel
 Zircaloy-4               Zr4
@@ -156,7 +156,7 @@ Pyrex                    Pyrex
 Void                     void
 M5                       M5
 Hafnium                  Hf
-==================  ====================
+=====================  =======================
 
 make_common_mix()
 -------------------------
