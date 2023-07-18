@@ -63,7 +63,8 @@ sulfur                SNat
 
 .. note::
 
-For non-regression purpose, the isotope Gd152 is not taken into account in the natural gadolinium composition (and replaced by Gd154).
+The isotope Gd152 is not taken into account in the natural gadolinium composition (and replaced by Gd154).
+Moreover, the natural aliminium composition is different when using an APXSM-formatted nuclear data library.
 
 
 
