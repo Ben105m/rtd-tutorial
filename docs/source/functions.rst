@@ -49,6 +49,23 @@ Methods
 set_natural_elements()
 -------------------------
 
+Set a pre-defined list of natural elements compositions. 
+
+.. note:: 
+
+	Each element is named after its chemical symbol, then followed by the locution "Nat".
+	For exemple :
+	+------------------+-------------------------------------------------------+
+	|**Element name**  |**Name in PyDrag**                                     |
+	+------------------+-------------------------------------------------------+
+	| iron             | FeNat                                                 |
+	+------------------+-------------------------------------------------------+
+	| chrome           | CrNat                                                 |
+	+------------------+-------------------------------------------------------+
+	| sulfur           | SNat                                                  |
+	+------------------+-------------------------------------------------------+
+
+
 set_natural_abundance()
 -------------------------
 
