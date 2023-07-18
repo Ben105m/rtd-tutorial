@@ -197,7 +197,7 @@ Duplicate the chosen mixture.
 
 .. note::
 
-  It is recommanded to use to create different MOX fuels as it follows :
+  It is recommanded to use this methode in order to create different MOX fuels, as it follows :
 
   1) Duplicate the existing "UO2" mixture (and name it "MOX")
   2) Duplicate the "MOX" fuel into as many mixtures as wanted. The identified MOX fuel names are "MOX_low", "MOX_medium" and "MOX_high", used to represent fuels with different plutonium enrichements.
