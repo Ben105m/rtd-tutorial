@@ -45,30 +45,36 @@ Methods
 Description
 ============
 
-The "Mix" objects are used to define the mixtures used for the calculation. By default, PyDrag is creating a list of pre-defined elements (based on common isotopic abundances), later used to create mixtures. The pre-defined mixtures have a fixed name, making them easier to handle by the code and directly callable in the input. However, it is possible for the user to create their own mixtures, duplicating existing mixtures, and such. The pre-definde mixtures are :  SS304, Inconel, Zr4, M5, AIC, B4C, Pyrex, Hf, water, Air, void, Gd, UO2, MOX.
+The "Mix" objects are used to define the mixtures used for the calculation. By default, PyDrag is creating a list of pre-defined elements (based on common isotopic abundances), later used to create mixtures. The pre-defined mixtures have a fixed name, making them easier to handle by the code and directly callable in the input. However, it is possible for the user to create their own mixtures, duplicating existing mixtures, and such. 
 
 Methods
 ==========
 
-set_natural_elements()
--------------------------
+.. _grids:
 
-Pre-define a list of natural elements compositions. 
-Each element is named after its chemical symbol, then followed by the locution "Nat".
-For exemple :
+"Grids" object
+*****************
 
-==================  ====================
-Element name        Name in PyDrag
-==================  ====================
-iron                  FeNat
-chrome                CrNat
-sulfur                SNat 
-==================  ====================
+TO BE COMPLETED
 
-.. warning::
+Description
+============
 
-  The isotope Gd152 is not taken into account in the natural gadolinium composition (and replaced by Gd154).
-  Moreover, the natural aliminium composition is different when using an APXSM-formatted nuclear data library.
+Methods
+==========
+
+.. _materials:
+
+"Material" object
+***********************
+
+Description
+============
+
+This class contains all the inforations about every :ref:`mix` and :ref:`library`. These data are used to compute every isotopic concentrations, in order to define the used mixtures in assembly (through a LIB: module call to DRAGON). The user can modify each mix by interacting with each mixture's specific object, or can interact directly with the "Material" class (with the different methods).
+
+Methods
+==========
 
 set_natural_abundance()
 -------------------------
@@ -103,6 +109,54 @@ Add a user-defined natural element.
 
   This method can be used to update the isotopic abundances of an existing element.
 
+set_tfuel()
+-------------------------
+
+Set the fuel temperature. The available units are degree Celsius, Fahrenheit and Kelvin.
+
+.. note::
+
+  This method modifies the temperature of 'UO2', 'MOX' and 'Gd' mixtures.
+
+duplicate_mix()
+-------------------------
+
+Duplicate the chosen mixture.
+
+.. note::
+
+  By default, the new mixture will be named after a combination of the original name and a digit.
+
+.. note::
+
+  It is recommanded to use this methode in order to create different MOX fuels, as it follows :
+
+  1) Duplicate the existing "UO2" mixture (and name it "MOX")
+  2) Duplicate the "MOX" fuel into as many mixtures as wanted. The identified MOX fuel names are "MOX_low", "MOX_medium" and "MOX_high", used to represent fuels with different plutonium enrichements.
+  3) Manually set the isotopic enrichments (see :ref:`mix`).
+
+
+set_natural_elements()
+-------------------------
+
+Pre-define a list of natural elements compositions. 
+Each element is named after its chemical symbol, then followed by the locution "Nat".
+For exemple :
+
+==================  ====================
+Element name        Name in PyDrag
+==================  ====================
+iron                  FeNat
+chrome                CrNat
+sulfur                SNat 
+==================  ====================
+
+.. warning::
+
+  The isotope Gd152 is not taken into account in the natural gadolinium composition (and replaced by Gd154).
+  Moreover, the natural aliminium composition is different when using an APXSM-formatted nuclear data library.
+
+
 load_composition()
 -------------------------
 
@@ -120,15 +174,6 @@ Load all the defined natural elements and mixtures' compositions into the object
 .. note::
 
   This method is used to update the mixtures/elements every time the user modifies the default caracteristics.
-
-set_tfuel()
--------------------------
-
-Set the fuel temperature. The available units are degree Celsius, Fahrenheit and Kelvin.
-
-.. note::
-
-  This method modifies the temperature of 'UO2', 'MOX' and 'Gd' mixtures.
 
 make_default_mix()
 -------------------------
@@ -186,53 +231,10 @@ add_combinated_mix()
 
 Create a used-defined combinated mixture, which is a material described through other existing mixtures. It differs from other mixtures as it is desribed in DRAGON with the "COMB" keyword at the LIB: call. 
 
-duplicate_mix()
--------------------------
-
-Duplicate the chosen mixture.
-
-.. note::
-
-  By default, the new mixture will be named after a combination of the original name and a digit.
-
-.. note::
-
-  It is recommanded to use this methode in order to create different MOX fuels, as it follows :
-
-  1) Duplicate the existing "UO2" mixture (and name it "MOX")
-  2) Duplicate the "MOX" fuel into as many mixtures as wanted. The identified MOX fuel names are "MOX_low", "MOX_medium" and "MOX_high", used to represent fuels with different plutonium enrichements.
-  3) Manually set the isotopic enrichments (see :ref:`mix`).
-
 make_fuel_mix()
 -------------------------
 
 Compute the isotopic concetrations of the mixtures containing U238.
-
-.. _grids:
-
-"Grids" object
-*****************
-
-TO BE COMPLETED
-
-Description
-============
-
-Methods
-==========
-
-.. _materials:
-
-"Material" object
-***********************
-
-TO BE COMPLETED
-
-Description
-============
-
-Methods
-==========
 
 .. _geometry:
 
