@@ -124,27 +124,89 @@ Load all the defined natural elements and mixtures' compositions into the object
 set_tfuel()
 -------------------------
 
+Set the fuel temperature. The available units are degree Celsius, Fahrenheit and Kelvin.
+
+.. note::
+
+  This method modifies the temperature of 'UO2', 'MOX' and 'Gd' mixtures.
+
 make_default_mix()
 -------------------------
+
+Pre-define the default mixtures' compositions.
+
+.. note::
+
+  Default mixtures' name are :
+
+=====================  ====================
+Common name              Pydrag mixture name
+=====================  ====================
+Stainless Steel 304      SS304
+Inconel                  Inconel
+Zircaloy-4               Zr4
+Ag-In-Cd                 AIC
+Air                      Air               
+UO2+Gd fuel              Gd
+MOX fuel                 MOX
+UO2 fuel                 UO2
+B4C                      B4C
+Water                    water
+Pyrex                    Pyrex
+Void                     void
+M5                       M5
+Hafnium                  Hf
+==================  ====================
 
 make_common_mix()
 -------------------------
 
+Compute the isotopic concetrations of the mixtures that are not made of U238. It includes all the "structure" materials, the "moderators", and the "absorbers".
+
+.. warning::
+
+  The molar mass of water is set to 18.01528 in the case of non-APLIB2 libraries.
+
 add_grids()
 -------------------------
+
+Create different moderators to be used in different areas of the assembly. It is representing the diltued assembly grids. The created moderators are called "MODE" (for central fuel cells), "MODEL" (for lateral fuel cells), "MODEC" (for corner fuel cells) and "MODETE" (for tube cells).
+
+.. note::
+
+  The moderators compositions are calculated based on the grid description given in the :ref:`grids` and the "water" mixture.
 
 make_mix()
 -------------------------
 
+Generate every mixtures' isotopic concentration based on all the given informations (default and user-defined).
+
 add_combinated_mix()
 -------------------------
+
+Create a used-defined combinated mixture, which is a material described through other existing mixtures. It differs from other mixtures as it is desribed in DRAGON with the "COMB" keyword at the LIB: call. 
 
 duplicate_mix()
 -------------------------
 
+Duplicate the chosen mixture.
+
+.. note::
+
+  By default, the new mixture will be named after a combination of the original name and a digit.
+
+.. note::
+
+  It is recommanded to use to create different MOX fuels as it follows :
+
+  1) Duplicate the existing "UO2" mixture (and name it "MOX")
+  2) Duplicate the "MOX" fuel into as many mixtures as wanted. The identified MOX fuel names are "MOX_low", "MOX_medium" and "MOX_high", used to represent fuels with different plutonium enrichements.
+  3) Manually set the isotopic enrichments (see :ref:`mix`).
+
 make_fuel_mix()
 -------------------------
 
+Compute the isotopic concetrations of the mixtures containing U238.
 
 .. _grids:
 
