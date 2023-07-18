@@ -160,14 +160,12 @@ Set the mixture's MOX fraction in the different assembly areas (corner, side and
 set_thermal_coef()
 -------------------------
 
-Set the mixture's linear expansion coefficient. By default, this coefficient is always set to 0. If the user defines its own coefficients, they will be used accordingly. However, if there is no coefficient (or some are missing), PyDrag automatically check for pre-defined expansion coefficients (as a function of the mixture's temperature).
+Set the mixture's linear expansion coefficient. By default, this coefficient is always set to 0. If the user defines its own coefficients, they will be used accordingly. However, if there is no coefficient (or if some are missing), PyDrag automatically check for pre-defined expansion coefficients (as a function of the mixture's temperature).
 
 .. _grids:
 
 "Grids" object
 *****************
-
-TO BE COMPLETED
 
 Description
 ============
