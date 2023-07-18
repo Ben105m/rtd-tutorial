@@ -86,7 +86,7 @@ Check for any correspondance between a "user-defined" isotope's name and the lib
 get_molar_mass()
 -------------------------
 
-Recover the molar masses of every available isotopes in chosen library. A correction is made in order to recover the right isotopic molar masses. In fact, the available libraries do not contain any direct mentions to the molar masses, and store the isotopic average weight ratio (AWR, which are the ratio of each isotope mass divided by the neutron mass). Moreover, as the isotopic neutron masses are not stored, the natural carbon mass (known, and set to 12.011 according to the NIST value) is used with the stored carbone AWR. The ratio of those two factors gives the corrective factor, applied on every AWRs.
+Recover the molar masses of every available isotopes in chosen library. A correction is made in order to recover the right isotopic molar masses. In fact, the available libraries do not contain any direct mentions to the molar masses, and store the isotopic average weight ratio (AWR, which are the ratio of each isotope mass divided by the neutron mass). Moreover, as the isotopic neutron masses are not stored, the natural carbon mass (known, and set to 12.011 according to the natural carbon NIST value) is used with the stored carbone AWR. The ratio of those two factors gives the corrective factor, applied on every AWRs.
 
 .. _mix:
 
@@ -100,6 +100,67 @@ The "Mix" objects are used to define the mixtures used for the calculation. By d
 
 Methods
 ==========
+
+info()
+-------------------------
+
+Displays general informations about the mixture class.
+
+set_density()
+-------------------------
+
+Set the mixture's density (in g/cm3).
+
+set_temperature()
+-------------------------
+
+Set the mixture's temperature (in °C, °K or °F). The temperature is converted and stored as °C.
+
+set_enrichment()
+-------------------------
+
+Set the isotopic enrichment/ratio (works for one isotope/element at a time).
+
+.. note::
+
+  This method is only used to define fuel mixtures.
+
+set_pressure()
+-------------------------
+
+Set the mixture's pressure (in bar, psi or Pa). The pressure is converted and stored as bar.
+
+.. note::
+
+  This methods is only used to set moderator's pressure.
+
+set_compo()
+-------------------------
+
+Set the mixture's composition. This methods can take as many isotopes/elements as needed in one call.
+
+set_boron()
+-------------------------
+
+Set the mixture's boron concentration (in pcm).
+
+.. note::
+
+  This methods is only used to set moderator's boron concentration.
+
+set_fraction()
+-------------------------
+
+Set the mixture's MOX fraction in the different assembly areas (corner, side and center pins).
+
+.. note::
+
+  This methods is only used for MOX-type fuels.
+
+set_thermal_coef()
+-------------------------
+
+Set the mixture's linear expansion coefficient. By default, this coefficient is always set to 0. If the user defines its own coefficients, they will be used accordingly. However, if there is no coefficient (or some are missing), PyDrag automatically check for pre-defined expansion coefficients (as a function of the mixture's temperature).
 
 .. _grids:
 
