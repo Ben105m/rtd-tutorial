@@ -89,7 +89,7 @@ Process the gap dilution for each pin in geometry. The gaps are identified when 
 grid_dilution()
 -------------------------
 
-Process the dilution of the assembly grids into the water. It uses the :ref:`grids`data and water mixture data. Different dilution models are available:
+Process the dilution of the assembly grids into the water. It uses the :ref:`grids` data and water mixture data. Different dilution models are available:
 
 - "Tihange": reference model for Tihange assembly. This model is based on the process described in the paper "Qualification du système NEPTUNE" (by H.PANEK), by using a unique temperature.
 - "Tihange_dev": updated model for Tihange assembly grid dilution. Based on the same source than previous model, and making it temperature-dependant. More explanation in the "warning" box. This model uses the cold volumic frations description of the grids.
@@ -98,8 +98,7 @@ Process the dilution of the assembly grids into the water. It uses the :ref:`gri
 
 .. warning::
 
-	The "Tihange_dev" model is using the volumic fractions of cold grids (in the different considered area to be diluted in) and the moderator temperature. These data allows PyDrag to compute the different hot assembly volumes, and then to get the hot volumic frations (which leads to the dilution ratio in the different areas). It allows to take into account the moderator temperature, which is always set to 286°C for "Tihange" model (which is a problem for branching calculations).
-As a side note, the "Tihange_dev" routine reproduces the results obtained in the reference document.
+	The "Tihange_dev" model is using the volumic fractions of cold grids (in the different considered area to be diluted in) and the moderator temperature. These data allows PyDrag to compute the different hot assembly volumes, and then to get the hot volumic frations (which leads to the dilution ratio in the different areas). It allows to take into account the moderator temperature, which is always set to 286°C for "Tihange" model (which is a problem for branching calculations). As a side note, the "Tihange_dev" routine reproduces the results obtained in the reference document.
 
 thermal_expans()
 -------------------------
