@@ -376,10 +376,15 @@ Methods
 "Power" object
 *********************
 
-TO BE COMPLETED
-
 Description
 ============
 
+This class contains some data required to compute the assembly power density (this calculation is done with a function from calculation.py, as it requires some informations about fuels).
+
 Methods
 ==========
+
+set_power_density()
+-------------------------
+
+Set the power density of assembly. By default, the value is set to 0, which leads to an automatic calculation of the density in calculation.py. A non-zero value will be directly used for evolution calculation.
