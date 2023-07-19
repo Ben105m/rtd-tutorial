@@ -18,11 +18,23 @@ PyDrag is manipulating different objects, each containing different kinds of inf
 
   - :ref:`power` : it is used to automatically computes the assembly power density (specifically used for evolution calculations) ;
 
+PyDrag is calling the :ref:`calculation` in order to perform different actions on data (such as thermal expansion, dilutions, etc.) and make evolution calculations.
+
 The next chapters detail the different objects handled by PyDrag, and describe the existing methods. The method's (current) limitations are clearly defined.
 
 .. warning::
 
   Each comment encapsulated in a warning box refers to an approximation used for non-regression purpose. Those mistakes will be removed later. 
+
+.. _calculation:
+
+"calculation.py" module
+*************************
+
+Functions
+==========
+
+TO BE COMPLETED
 
 .. _library:
 
