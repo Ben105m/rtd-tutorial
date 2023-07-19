@@ -334,8 +334,29 @@ Set the mixture's linear expansion coefficient. By default, this coefficient is 
 Description
 ============
 
+This class describes the assembly grids. PyDrag identifies the grids in two different categories : "Crate" ones (default grid) and "Sleeve" ones. This model comes from the BEAVRS grids representation. Those two different grid types represent (in the same order) the grids that will be diluted in the assembly moderator, and the grids to be diluted in the surrounding water gap. It is possible to describe the grids by giving different types of information, described in the following sub-chapter.
+
 Methods
 ==========
+
+set_fraction()
+-------------------------
+
+Set the cold volumic fraction of chosen material in different moderator areas ("tube", "fuel" and "gap" areas).
+
+.. note::
+
+	This method is specifically designed for Tihange-1 assembly description, where there is no data about grid mass/volume.
+
+set_mass()
+-------------------------
+
+Set the chosen material's total mass in the grids (in g).
+
+set_volume()
+-------------------------
+
+Set the chosen material's total volume in the grids (in cm3).
 
 .. _materials:
 
