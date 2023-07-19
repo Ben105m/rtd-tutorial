@@ -363,13 +363,37 @@ Compute the isotopic concetrations of the mixtures containing U238.
 "Geometry" object
 *********************
 
-TO BE COMPLETED
-
 Description
 ============
 
+This class describes the assembly geometry to be modelized. It is mainly represented by a list of lists, containing the assiociation of pin's dimensions and the different materials' names inside each described areas. A pin is represented as a rectangular cell composed of centered circular regions. An assembly can be fully represented, or using 4th symmetry or 8th symmetry. For now, it is mandatory to describe it by its "South East" side (for 4th symmetry) or "East South-East" side (for 8th symmetry), as PyDrag has pre-defined symmetry axis for the GEO: module call.
+
 Methods
 ==========
+
+set_mesh()
+-------------------------
+
+Set the pin's mesh for each pin type, based on the type of moderator used in the cell.
+
+make_rings()
+-------------------------
+
+Create a list of rings for the chosen material.
+
+.. note::
+
+	This functions is used for the spatial discretization of fuel (and absorber) rings.
+	
+set_pin_type()
+-------------------------
+
+Create a copy of the assembly plan attributes and replace every identical pins by a generic name (in order to make them easier to identify).
+
+get_position()
+-------------------------
+
+Identify the position (corner/side/center) of each pin of the plan. This method helps to identify which kind of moderator will be used for the pins.
 
 .. _power:
 
