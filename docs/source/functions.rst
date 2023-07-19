@@ -34,7 +34,160 @@ The next chapters detail the different objects handled by PyDrag, and describe t
 Functions
 ==========
 
-TO BE COMPLETED
+get_power_density()
+-------------------------
+
+Recover the assembly power density. If a non-zero density is already set in :ref:`power`, is it used. If not, the density is calculated.
+
+get_water_density()
+-------------------------
+
+Get the water density from pre-tabulated DRAGON data, by using pressure and temperature stored in the water mixture object.
+
+.. note::
+
+	This method uses the c2m procedure "GetWaterDens.c2m".
+
+count_pin()
+-------------------------
+
+Count the number of pins in assembly, according to their position (center, side and corner). It takes into the account the symmetry axis.
+
+get_bu_list()
+-------------------------
+
+Get the pre-defined evolution burnup step. These values depend of the fuel type used (presence of Gd or not).
+
+Tihange_model()
+-------------------------
+
+Process the calculation of relative elongation coefficient. The material temperature is taken into account.
+The coefficient calculation routine comes from the publication "Qualification du système NEPTUNE" (by H.PANEK) at p.153.
+
+.. note::
+
+	This function is used when there is no thermal expansion coefficient defined, for each material.
+
+PIN_model()
+-------------------------
+
+Process the calculation of distance dilatation.
+
+.. note::
+
+	This function is used when a non-zero thermal expansion coefficient is defined, for each material.
+
+gap_dilution()
+-------------------------
+
+Process the gap dilution for each pin in geometry. The gaps are identified when PyDrag sees a "void" mixture in the cell, and will dilute this empty space with the closest clad.
+
+.. note::
+
+	In reality, the gap is made of helium, rather than void.
+
+grid_dilution()
+-------------------------
+
+Process the dilution of the assembly grids into the water. It uses the :ref:`grids`data and water mixture data. Different dilution models are available:
+
+- "Tihange": reference model for Tihange assembly. This model is based on the process described in the paper "Qualification du système NEPTUNE" (by H.PANEK), by using a unique temperature.
+- "Tihange_dev": updated model for Tihange assembly grid dilution. Based on the same source than previous model, and making it temperature-dependant. More explanation in the "warning" box. This model uses the cold volumic frations description of the grids.
+- "TOT": generic grid dilution process. This model uses the massic/volumic description of the grids.
+- "NULL": no grid dilution.
+
+.. warning::
+
+	The "Tihange_dev" model is using the volumic fractions of cold grids (in the different considered area to be diluted in) and the moderator temperature. These data allows PyDrag to compute the different hot assembly volumes, and then to get the hot volumic frations (which leads to the dilution ratio in the different areas). It allows to take into account the moderator temperature, which is always set to 286°C for "Tihange" model (which is a problem for branching calculations).
+As a side note, the "Tihange_dev" routine reproduces the results obtained in the reference document.
+
+thermal_expans()
+-------------------------
+
+Process the thermal expansion calculation for every distances and densities. The thermal expansion either uses the user-defined linear elongation coefficients or computes them (based on pre-defined values and adapting them with temperatures).
+
+verify_data()
+-------------------------
+
+Verify the content of the different PyDrag objects that may cause PyDrag calculation failures.
+
+init_data()
+-------------------------
+
+Initialize some calculation informations, based on the user-defined data in input. This functions :
+
+- adds some moderator in the surrounding area of each pin ;
+- creates the circular rings for the fuel pins ; 
+- computes the average clad temperature ;
+- processes the thermal expansion, gap dilutions and grid dilution ;
+- regroups every identical clads for the different pins ;
+- creates the circular rings for AIC/B4C/Hafnium for control rods ;
+- saves the mixtures/pins used for the assembly (in order to not modelize unused pre-defined mixtures) ;
+- gives a generic name for each identical pins of the plan ;
+- identifies the isotopes that should be self-shielded ;
+
+.. warning::
+
+	The AIC aborber does not contain any ring for 15x15 pins assembly.
+
+.. warning::
+
+	The silicium isotopes are ignored for the description of the Pyrex absoring rods (even if they are used to compute the isotopic concentrations and densities). 
+
+get_SS_IDs()
+-------------------------
+
+Get the INRS number of self-shielded isotopes (INRS is the index of resonant region associated with each isotope). These IDs come from the DRAGON user guide.
+
+LIB()
+-------------------------
+
+Process the LIB: module call, by desribing every used mixtures. There are two leakage model that can be used ("APOL" and "OLDW").
+
+.. note::
+
+	The self-shielding method is automatically adapted to the number of energy groups in the library :
+	subgroup self-shielding with physical probability tables ("SUBG") if there are less than 295 groupes
+	mathematical probability ("PT") tables otherwise
+
+GEO()
+-------------------------
+
+Process the GEO: module call, in order to describe to assembly and to associate each geometrical areas to a mixture.
+
+
+USS()
+-------------------------
+
+Process the USS: module call, in order to create/update self-shielded library. The USS: calls are performed for every self-shielding burnup steps (that are pre-defined).
+
+FLU()
+-------------------------
+
+Process the ASM: and FLU: modules call. There are three different available leakage models :
+
+- "APOL" : APOLLO-equivalent leakage model
+- "CASM" : CASMO-equivalent leakage model
+- "NLKG" : no leakage model
+
+T0()
+-------------------------
+
+Process the T0 calculation, wihch initialize every LCM objects.
+
+EVO()
+-------------------------
+
+Perform the EVO: module call between two time (in days) / burnup (in MWd/t or GWd/t) steps.
+
+Deplete()
+-------------------------
+
+Perform the evolution calculation for the given burnup step list, grid dilution type and leakage model.
+
+.. note::
+
+	It is possible to make a depletion calculation for a burnup step list equals to [0], in order to make a T0 calculation.
 
 .. _library:
 
