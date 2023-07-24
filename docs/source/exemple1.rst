@@ -44,12 +44,11 @@ These lines update different materials' property : Pyrex composition, AIC densit
 
 ::
 
-  temperature = [547, 'F']
-  materials.set_tfuel(temperature)
-  materials.water.set_temperature(temperature)
+  materials.set_tfuel([547, 'F'])
+  materials.water.set_temperature([547, 'F'])
   materials.water.set_boron(600) 
 
-Then, the fuel temperature and moderator temperature and boron concentration are defined. Moreover, the core power is given (in order to be used later during evolution calculation).
+Then, the fuel temperature (547°F), moderator temperature (547°F) and boron concentration (600 pcm) are defined. Moreover, the core power is given (in order to be used later during evolution calculation).
 
 ::
 
