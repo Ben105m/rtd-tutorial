@@ -521,6 +521,10 @@ make_mix()
 
 Generate every mixtures' isotopic concentration based on all the given informations (default and user-defined).
 
+.. note::
+
+	It is not necessary to declare the proportion of U238 in fuel mixtures, as it is automatically calculated based on the other declared ratio.
+
 add_combinated_mix()
 -------------------------
 
