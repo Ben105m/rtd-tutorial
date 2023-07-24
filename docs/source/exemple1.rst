@@ -67,7 +67,7 @@ An exemple of fue pin description is given : 3 circles of UO2 fuel, "void" (used
 
 ::
 
-  if Rods == None:
+  if Rods == 'None':
     PinLayout = [[I, F, F, O, F, F, O, F, F],
                     [F, F, F, F, F, F, F, F],
                        [F, F, F, F, F, F, F],
