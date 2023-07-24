@@ -20,6 +20,7 @@ Contents
    quickinstall
    quickstart
    functions
+   exemple0
    exemple1
    nonregression
    documentation
