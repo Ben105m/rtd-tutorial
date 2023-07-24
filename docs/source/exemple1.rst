@@ -8,14 +8,7 @@ The data written in the file located at :file:`./data/Fessenheim-Bugey-Almaraz.p
 This chapter gives a description of this file content. To get started::
 
   for enri, Rods in [[3.10/100, 'None'],
-                     [3.10/100, 'AIC'],
-                     [3.10/100, 'Py12'],
-                     [3.10/100, 'Py16'],
-                     [2.60/100, 'Py12'],
-                     [2.60/100, 'Py16'],
-                     [2.60/100, 'Py20'],
-                     [2.10/100, 'None'],
-                     [2.10/100, 'AIC']]:
+                     [3.10/100, 'AIC']]:
 
 This is the list of all available assembly configurations, described by the fuel enrichment and the control rod types. Then::
 
@@ -74,15 +67,26 @@ An exemple of fue pin description is given : 3 circles of UO2 fuel, "void" (used
 
 ::
 
-  PinLayout = [[I, F, F, O, F, F, O, F, F],
-                  [F, F, F, F, F, F, F, F],
-                     [F, F, F, F, F, F, F],
-                        [O, F, F, O, F, F],
-                           [F, F, F, F, F],
-                              [O, F, F, F],
-                                 [F, F, F],
-                                    [F, F],
-                                       [F]]
+  if Rods == None:
+    PinLayout = [[I, F, F, O, F, F, O, F, F],
+                    [F, F, F, F, F, F, F, F],
+                       [F, F, F, F, F, F, F],
+                          [O, F, F, O, F, F],
+                             [F, F, F, F, F],
+                                [O, F, F, F],
+                                   [F, F, F],
+                                      [F, F],
+                                         [F]]
+  elif Rods == 'AIC':
+    PinLayout = [[I, F, F, C, F, F, C, F, F],
+                    [F, F, F, F, F, F, F, F],
+                       [F, F, F, F, F, F, F],
+                          [C, F, F, C, F, F],
+                             [F, F, F, F, F],
+                                [C, F, F, F],
+                                   [F, F, F],
+                                      [F, F],
+                                         [F]]
 
 The assembly pin layout is given as a list of list, representing each line of pins. These pins are described before (as it is done for the previously given fuel pin).
 
