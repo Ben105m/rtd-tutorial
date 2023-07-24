@@ -21,3 +21,19 @@ This last line allows the user to call a specific nuclear data library. In this 
   materials.UO2.set_enrichment('U235', 0.0195)
   materials.UO2.set_enrichment('U236', 0.000120000004)
 
+.. code-block:: python
+  :caption: Description of water mixture (which is the moderator)
+
+  materials.water.set_temperature(286.1111,'C')
+  materials.water.set_density(0.716403)
+  materials.water.set_boron(600)
+
+.. code-block:: python
+  :caption: Description of Tihange grids
+
+  materials.grids.set_fraction(1.175,'Inconel','tube')
+  materials.grids.set_fraction(2.223,'SS304','tube')
+  materials.grids.set_fraction(0.5496,'Inconel','fuel')
+  materials.grids.set_fraction(4.166,'Inconel','gap')
+
+
