@@ -91,7 +91,7 @@ PyDrag is based on PyGan libraries from Version5 (currently, distribution number
 		make clean
 
 
- - you want to work on your own distribution : you need to download the chosen archive from `Version5 <http://merlin.polymtl.ca/development.html>`_ and compile it
+ - you want to work on your own distribution : you need to download the chosen archive from `Version5 <http://merlin.polymtl.ca/development.htm>`_ and compile it
  
 	1. Download the latest TAR archive of Version5 and place it wherever you need
 
