@@ -36,4 +36,35 @@ This last line allows the user to call a specific nuclear data library. In this 
   materials.grids.set_fraction(0.5496,'Inconel','fuel')
   materials.grids.set_fraction(4.166,'Inconel','gap')
 
+.. code-block:: python
+  :caption: Geometry made of 2 different pins (fuel F and tube T)
+
+  F = ['UO2', 0.464693,
+       'void', 0.474218,
+       'Zr4', 0.53594] 
+  T = ['water', 0.65024,
+       'Zr4', 0.69342] 
+
+.. code-block:: python
+  :caption: Geometry pin layout and assembly dimensions
+
+  PinLayout = [[T, F, F, F, T, F, F, F],
+                  [F, F, F, F, F, F, F],
+                     [F, F, F, T, F, F],
+                        [T, F, F, F, F],
+                           [F, F, F, F],
+                              [T, F, F],
+                                 [F, F],
+                                    [F]]
+  geom = pydrag.Geometry(PinLayout,PinPitch = 1.4300201,AssemblyPitch = 21.50364,ActiveHeight = 365.76)
+
+.. code-block:: python
+  :caption: Assembly power density parameters
+
+  powerDens = pydrag.Power(nbAssemblies = 157, corePower = 2652)
+
+.. code-block:: python
+  :caption: Tihange evolution calculation (with a Tihange-type grid dilution)
+
+  burnup,kinf = pydrag.Deplete(materials, geom, powerDens,TypeDil = 'Tihange')
 
