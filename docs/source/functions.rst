@@ -115,7 +115,7 @@ init_data()
 
 Initialize some calculation informations, based on the user-defined data in input. This functions :
 
-- adds some moderator in the surrounding area of each pin ;
+- adds some moderator in the surrounding area of each pin (in order to make rectangular cells) ;
 - creates the circular rings for the fuel pins ; 
 - computes the average clad temperature ;
 - processes the thermal expansion, gap dilutions and grid dilution ;
