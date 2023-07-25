@@ -66,7 +66,7 @@ The coefficient calculation routine comes from the publication "Qualification du
 
 .. note::
 
-	This function is used when there is no thermal expansion coefficient defined, for each material.
+	This function is used when there is no defined thermal expansion coefficient, for each material.
 
 PIN_model()
 -------------------------
