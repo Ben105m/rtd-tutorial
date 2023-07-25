@@ -98,7 +98,7 @@ Process the dilution of the assembly grids into the water. It uses the :ref:`gri
 
 .. warning::
 
-	The "Tihange_dev" model is using the volumic fractions of cold grids (in the different considered area to be diluted in) and the moderator temperature. These data allows PyDrag to compute the different hot assembly volumes, and then to get the hot volumic frations (which leads to the dilution ratio in the different areas). It allows to take into account the moderator temperature, which is always set to 286°C for "Tihange" model (which is a problem for branching calculations). As a side note, the "Tihange_dev" routine reproduces the results obtained in the reference document.
+	The "Tihange_dev" model is using the cold volumic fractions of each grid materials (in the different considered area to be diluted in) and the moderator temperature. These data allows PyDrag to compute the different hot assembly volumes, and then to get the hot volumic frations (which leads to the dilution ratio in the different areas). It allows to take into account the moderator temperature, which is always set to 286°C for "Tihange" model (which is a problem for branching calculations). As a side note, the "Tihange_dev" routine reproduces the results obtained in the reference document.
 
 thermal_expans()
 -------------------------
