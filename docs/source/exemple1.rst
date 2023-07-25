@@ -21,7 +21,7 @@ This last line allows the user to call a specific nuclear data library. In this 
 
 .. note::
 
-  If the library does already exist in the :file:`./libraries/` folder (created/updated at each calculation), the library is not downloaded again.
+  If the library does already exist in the :file:`./libraries/` folder (created / updated at each calculation), the library is not downloaded again.
 
 ::
 
