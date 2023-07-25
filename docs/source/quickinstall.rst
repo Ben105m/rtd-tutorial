@@ -55,7 +55,7 @@ Otherwise, if you want to download the archive :
 
 .. code-block:: sh
 
-	tar -xvzf dragor-DRAGOR-V2.1.tgz
+	tar -xvzf PyDrag-main.tgz
 
 
 **********************************************************************
@@ -79,7 +79,7 @@ Now, you should have the PyDrag project cloned into your system and all necessar
 Installing and compiling Version5
 **********************************************************************
 
-PyDrag is based on PyGan libraries from Version5 (currently, distribution number v5bev2761). You will need DRAGON-related codes and sources. There are two different situations :
+PyDrag is based on PyGan libraries from Version5 (currently, distribution number v5bev2958). You will need DRAGON-related codes and sources. There are two different situations :
 
  - you want to work with the original Version5 distribution. Then, you can use the ./src/Version5/ folder, containing every sources from this distribution (that is no longer available online). Use the following commands :
 
