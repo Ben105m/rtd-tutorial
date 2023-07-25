@@ -29,19 +29,21 @@ Cloning PyDrag project
 You can either clone the project through a direct HTTP protocole or by downloading the project as an archive.
 If you want to use the HTTP protocole:
 
-1. Clone the PyDrag project from PICOCS into your local machine with the HTTP protocole :
+1. Clone the PyDrag project from GitLab into your local machine with the HTTP protocole :
 
 .. code-block:: sh
 
-	git clone http://picocs.neutron.intra.irsn.fr/orion/dragor.git .
+	git clone https://gitlab.extra.irsn.fr/PyDrag/PyDrag.git .
 
-	
-2. It may be required to change branch from "master" (DRAGOR-V1.3) to "DRAGOR-V2.1" (the one under developpement) :
+.. note::
+
+	GitLab.extra will ask you for your passwords. If it is not working, you may create a PAT (Personal Access Token) in order to access the repository.
+
+2. It may be required to change branch, as the calculation scheme may be developped on different branches :
 
 .. code-block:: sh
 	
 	git checkout DRAGOR-V2.1
-
 
 Otherwise, if you want to download the archive :
 
