@@ -24,7 +24,6 @@ Contents
    exemple1
    nonregression
    documentation
-   hypothesis
    contact
 
 
