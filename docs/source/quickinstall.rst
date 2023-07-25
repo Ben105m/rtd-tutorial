@@ -5,13 +5,13 @@ PyDrag installation guide
 ######################################
 
 This is the documentation about PyDrag project installation with all required dependencies. Some additional guidelines are also given.
-This guide has been written for Version5 revisions 5.0.7 and 5.0.8.
+This guide has been written for `Version5 <http://merlin.polymtl.ca/development.htm>`_ revisions 5.0.7 and 5.0.8.
 
 ***********************************
 Setting environnement variables
 ***********************************
 
-First, you need to set some variables used by Version5 and PyGan, by adding or modifying them in your .profile.perso file :
+First, you need to set some variables used by `Version5 <http://merlin.polymtl.ca/development.htm>`_ and PyGan, by adding or modifying them in your .profile.perso file :
 
 .. code-block:: sh
 
