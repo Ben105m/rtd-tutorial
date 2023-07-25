@@ -10,7 +10,8 @@ It is possible to start a PyDrag calculation through two ways (using Tihange inp
 
 	.. code-block:: sh
 
-		./pydrag -s Tihange.py
+		cd ./data/
+		../pydrag -s Tihange.py
 
 	This command allows to store every PyGan-related informations into a txt file. However, it may be needed to manually delete the /tmp/ folder, as the slurm execution script can not delete the folder where it has been created.
 
