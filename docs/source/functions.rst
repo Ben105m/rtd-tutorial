@@ -172,7 +172,7 @@ Process the ASM: and FLU: modules call. There are three different available leak
 T0()
 -------------------------
 
-Process the T0 calculation, wihch initialize every LCM objects.
+Process the T0 calculation, wihch initialize every LCM objects (by calling init_data(), LIB(), GEO(), USS() and FLU()) .
 
 EVO()
 -------------------------
