@@ -9,10 +9,10 @@ This exemple is a reduced version of :file:`./data/Tihange.py` (1.95% UO2 with w
 
 The sources used to produce this inputs are :
 
-- `"Qualification du système NEPTUNE" <https://inis.iaea.org/collection/NCLCollectionStore/_Public/11/511/11511367.pdf>`_ -- CEA public note N-2092 by H.PANEK
-- `"In-core fuel management code package validation for PWRs" <https://inis.iaea.org/collection/NCLCollectionStore/_Public/26/077/26077395.pdf>`_ -- IAEA TECDOC-815
-- `"Incertitudes et ajustement des données nucléaires au moyen des méthodes déterministes, probabilistes et de mesures effectuées sur des REP" <https://publications.polymtl.ca/10545/>`_ -- Ecole Polytechnique de Montreal thesis by V.SALINO
-- `"LWR nuclear fuel bundle data for use in fuel bundle handling" <https://www.osti.gov/servlets/purl/5856990>`_ -- Pacific Northwest Laboratory note UC-85
+- [1] `"Qualification du système NEPTUNE" <https://inis.iaea.org/collection/NCLCollectionStore/_Public/11/511/11511367.pdf>`_ -- CEA public note N-2092 by H.PANEK
+- [2] `"In-core fuel management code package validation for PWRs" <https://inis.iaea.org/collection/NCLCollectionStore/_Public/26/077/26077395.pdf>`_ -- IAEA TECDOC-815
+- [3] `"Incertitudes et ajustement des données nucléaires au moyen des méthodes déterministes, probabilistes et de mesures effectuées sur des REP" <https://publications.polymtl.ca/10545/>`_ -- Ecole Polytechnique de Montreal thesis by V.SALINO
+- [4] `"LWR nuclear fuel bundle data for use in fuel bundle handling" <https://www.osti.gov/servlets/purl/5856990>`_ -- Pacific Northwest Laboratory note UC-85
 
 This chapter gives a description of this file content. To get started::
 
@@ -29,11 +29,13 @@ This last line allows the user to call a specific nuclear data library. In this 
   materials.UO2.set_enrichment('U235', 0.0195)
   materials.UO2.set_enrichment('U236', 0.00012)
 
-Those composition are taken from :
+Those composition are taken from reference [1] for the "Region 1" composition (p.154) :
 
 .. figure:: ./_images/TIHANGE_UO2.png
    :align: center
    :figclass: align-center
+
+The annotation on the UO2 density precises that 10.412 g/cm^3 represents 95% of the fuel density (which equals 10.96*0.95). The fuel temperature is set to 547°F (or 286.11°C, from the same reference).
 
 .. code-block:: python
   :caption: Description of water mixture (which is the moderator)
