@@ -6,7 +6,7 @@ Objetcs, functions and methods
 
 PyDrag is manipulating different objects, each containing different kinds of informations :
 
-  - `Library object <library>`_ : contains all the available informations for the chosen nuclear data library. The user does not need to directly interact with it, as the library type, the isotopes contained inside, and the nuclear data are automatically extracted with PyDrag ;
+  - :ref:`Library object <library>` : contains all the available informations for the chosen nuclear data library. The user does not need to directly interact with it, as the library type, the isotopes contained inside, and the nuclear data are automatically extracted with PyDrag ;
 
   -  :ref:`mix` : contains mixture's informations, such as temperature, linear expansion coefficient, compositions. These objects are pre-defined in PyDrag, and it is important to keep their name for the calculation ;
 
