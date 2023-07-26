@@ -25,9 +25,15 @@ This last line allows the user to call a specific nuclear data library. In this 
 
   materials.set_tfuel(286.1111,'C')
   materials.UO2.set_density(10.96*0.95)
-  materials.UO2.set_enrichment('U234', 0.00018999999)
+  materials.UO2.set_enrichment('U234', 0.00019)
   materials.UO2.set_enrichment('U235', 0.0195)
-  materials.UO2.set_enrichment('U236', 0.000120000004)
+  materials.UO2.set_enrichment('U236', 0.00012)
+
+Those composition are taken from :
+
+.. figure:: ./_images/TIHANGE_UO2.png
+   :align: center
+   :figclass: align-center
 
 .. code-block:: python
   :caption: Description of water mixture (which is the moderator)
