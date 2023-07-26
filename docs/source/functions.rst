@@ -12,7 +12,7 @@ PyDrag is manipulating different objects, each containing different kinds of inf
 
   - :ref:`Grid object <grids>` : contains the description of the assembly grids ;
 
-  - :ref:`Materials object <materials>` : contains all the data related to mixtures. Among others, it includes :ref:`library`, :ref:`grids` and every existing :ref:`mix` (as sub-classes) ; 
+  - :ref:`Materials object <materials>` : contains all the data related to mixtures. Among others, it includes :ref:`library <library>`, :ref:`grids <grids>` and every existing :ref:`mixtures <mix>` (as sub-classes) ; 
 
   - :ref:`Geometry object <geometry>` : describes the assembly geometry, such as the pin layout, the different dimensions, and the mixtures overlay of each pin ;
 
