@@ -4,7 +4,7 @@
 Simple Tihange exemple
 ################################
 
-The data written in the file located at :file:`./data/Simplest.py` represent an light input designed to represent Tihange-1.
+The data written in the file located at :file:`./data/Simplest.py` represent an light input designed to represent 15x15 pins Tihange-1 UO2 assembly.
 This exemple is a reduced version of :file:`./data/Tihange.py` (1.95% UO2 with water-filled tubes).
 This chapter gives a description of this file content. To get started::
 
