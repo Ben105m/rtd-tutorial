@@ -199,10 +199,16 @@ Description
 This class contains all the informations related to the chosen nuclear data library. It is created when calling the "Material" class, such as:
 
 .. code-block:: Python
+	:caption: Library specification exemple in a PyDrag input (through the Materials class)
 
   materials = pydrag.Materials(NuclearData = 'https://github.com/IRSN/PyNjoy2016/releases/download/JEFF-3.x/drglibJEFF-3.1.1')
 
 The "Library" class is able to identify internet adress (as long as it starts by "http") in order to download any library. For now, PyDrag can only download libraries from a Git repository. It is also possible to give the absolute path to this library (if it is located locally) or a symbolic link. In any case, PyDrag will create a new symbolic link named "MyLib", which is deleted at every restart (if it does exist). Moreover, PyDrag can handle different types of library, as long as they are APLIB2, APXSM or DRAGLIB.
+
+.. warning:
+
+	For now, it is impossible to use different libraries for the calculations if the files have the **same name** in different repositories. In fact, cloning a file with :file:`git clone` will not copy a new library if it has the same name as the previous one (as PyDrag will identify them as the exact same ones, based on their names).
+
 
 Methods
 ==========
