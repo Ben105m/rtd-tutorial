@@ -10,18 +10,15 @@ This chapter gives a description of this file content. To get started::
   for enri, Rods in [[3.10/100, 'None'],
                      [3.10/100, 'AIC']]:
 
-This is the list of all available assembly configurations, described by the fuel enrichment and the control rod types. Then::
+This is the list of some assembly configurations, described by the fuel enrichment and the control rod types. Then::
 
-  #---
-  #  Materials and their temperatures
-  #---
   materials = pydrag.Materials(NuclearData= 'https://github.com/IRSN/PyNjoy2016/releases/download/JEFF-3.x/drglibJEFF-3.3_295')
 
 This last line allows the user to call a specific nuclear data library. In this case, the library will be downloaded from another Git repository. The Materials call will create a list of pre-defined mixtures.
 
 .. note::
 
-  If the library does already exist in the :file:`./libraries/` folder (created / updated at each calculation), the library is not downloaded again.
+  If the library does already exist in the :file:`./libraries/` folder (created / updated at each calculation), the library is not be downloaded again.
 
 ::
 
