@@ -198,8 +198,8 @@ Description
 
 This class contains all the informations related to the chosen nuclear data library. It is created when calling the "Material" class, such as:
 
-.. code-block:: Python
-	:caption: Library specification exemple in a PyDrag input (through the Materials class)
+.. code-block:: python
+  :caption: Library specification exemple in a PyDrag input (through the Materials class)
 
   materials = pydrag.Materials(NuclearData = 'https://github.com/IRSN/PyNjoy2016/releases/download/JEFF-3.x/drglibJEFF-3.1.1')
 
