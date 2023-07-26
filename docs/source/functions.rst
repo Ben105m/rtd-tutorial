@@ -8,15 +8,15 @@ PyDrag is manipulating different objects, each containing different kinds of inf
 
   - :ref:`Library object <library>` : contains all the available informations for the chosen nuclear data library. The user does not need to directly interact with it, as the library type, the isotopes contained inside, and the nuclear data are automatically extracted with PyDrag ;
 
-  -  :ref:`mix` : contains mixture's informations, such as temperature, linear expansion coefficient, compositions. These objects are pre-defined in PyDrag, and it is important to keep their name for the calculation ;
+  -  :ref:`Mixture object <mix>` : contains mixture's informations, such as temperature, linear expansion coefficient, compositions. These objects are pre-defined in PyDrag, and it is important to keep their name for the calculation ;
 
-  - :ref:`grids` : contains the description of the assembly grids ;
+  - :ref:`Grid object <grids>` : contains the description of the assembly grids ;
 
-  - :ref:`materials` : contains all the data related to mixtures. Among others, it includes :ref:`library`, :ref:`grids` and every existing :ref:`mix` (as sub-classes) ; 
+  - :ref:`Materials object <materials>` : contains all the data related to mixtures. Among others, it includes :ref:`library`, :ref:`grids` and every existing :ref:`mix` (as sub-classes) ; 
 
-  - :ref:`geometry` : describes the assembly geometry, such as the pin layout, the different dimensions, and the mixtures overlay of each pin ;
+  - :ref:`Geometry object <geometry>` : describes the assembly geometry, such as the pin layout, the different dimensions, and the mixtures overlay of each pin ;
 
-  - :ref:`power` : it is used to automatically computes the assembly power density (specifically used for evolution calculations) ;
+  - :ref:`Power object <power>` : it is used to automatically computes the assembly power density (specifically used for evolution calculations) ;
 
 PyDrag is calling the :ref:`calculation` in order to perform different actions on data (such as thermal expansion, dilutions, etc.) and make evolution calculations.
 
