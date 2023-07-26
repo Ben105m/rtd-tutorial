@@ -61,6 +61,20 @@ The annotation on the UO2 density precises that 10.412 g/cm^3 represents 95% of 
   T = ['water', 0.65024,
        'Zr4', 0.69342] 
 
+These dimensions come from the reference [1] (p.153 and p.158):
+
+.. figure:: ./_images/TIHANGE_UO2_pin.png
+   :align: center
+   :figclass: align-center
+
+.. figure:: ./_images/TIHANGE_tube_pin.png
+   :align: center
+   :figclass: align-center
+
+.. note:
+  
+  The radii "Re" represent the equivalent radii used by the author in his own methdology. They are not used for the PyDrag calculation and geometry description. As a side note, the "void" radius is, in reality, made of Helium.
+
 .. code-block:: python
   :caption: Geometry pin layout and assembly dimensions
 
