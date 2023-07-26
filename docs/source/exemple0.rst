@@ -9,7 +9,7 @@ This exemple is a reduced version of :file:`./data/Tihange.py` (1.95% UO2 with w
 
 The sources used to produce this inputs are :
 
-- `"Qualification du système NEPTUNE" <https://inis.iaea.org/collection/NCLCollectionStore/_Public/11/511/11511367.pdf>`_ CEA public note N-2092 by H.PANEK
+- `"Qualification du système NEPTUNE" <https://inis.iaea.org/collection/NCLCollectionStore/_Public/11/511/11511367.pdf>`_ -- CEA public note N-2092 by H.PANEK
 - `"In-core fuel management code package validation for PWRs" <https://inis.iaea.org/collection/NCLCollectionStore/_Public/26/077/26077395.pdf>`_ -- IAEA note
 - `"Incertitudes et ajustement des données nucléaires au moyen des méthodes déterministes, probabilistes et de mesures effectuées sur des REP" <https://publications.polymtl.ca/10545/>`_ -- Ecole Polytechnique de Montreal thesis by V.SALINO
 - `"LWR nuclear fuel bundle data for use in fuel bundle handling" <https://www.osti.gov/servlets/purl/5856990>`_ -- Pacific Northwest Laboratory note UC-85
