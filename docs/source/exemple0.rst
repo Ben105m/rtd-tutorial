@@ -6,6 +6,13 @@ Simple Tihange exemple
 
 The data written in the file located at :file:`./data/Simplest.py` represent an light input designed to represent 15x15 pins Tihange-1 UO2 assembly.
 This exemple is a reduced version of :file:`./data/Tihange.py` (1.95% UO2 with water-filled tubes).
+The sources used to produce this inputs are :
+
+- CEA public note N-2092 `"Qualification du système NEPTUNE" <https://inis.iaea.org/collection/NCLCollectionStore/_Public/11/511/11511367.pdf>`_ by H.PANEK
+- IAEA note `"In-core fuel management code package validation for PWRs" <https://inis.iaea.org/collection/NCLCollectionStore/_Public/26/077/26077395.pdf>`_
+- EPM `"Incertitudes et ajustement des données nucléaires au moyen des méthodes déterministes, probabilistes et de mesures effectuées sur des REP" <https://publications.polymtl.ca/10545/>`_ by V.SALINO
+- PNL note UC-85 `"LWR nuclear fuel bundle data for use in fuel bundle handling" <https://www.osti.gov/servlets/purl/5856990>`_
+
 This chapter gives a description of this file content. To get started::
 
   materials = pydrag.Materials(NuclearData = 'https://github.com/IRSN/PyNjoy2016/releases/download/JEFF-3.x/drglibJEFF-3.1.1')
