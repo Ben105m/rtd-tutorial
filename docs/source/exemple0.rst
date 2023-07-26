@@ -64,14 +64,16 @@ The annotation on the UO2 density precises that 10.412 g/cm^3 represents 95% of 
 These dimensions come from the reference [1] (p.153 and p.158):
 
 .. figure:: ./_images/TIHANGE_UO2_pin.png
-   :align: center
-   :figclass: align-center
-   :caption: Description of a Tihange-1 fuel pin radii
+  :align: center
+  :figclass: align-center
+   
+  Description of a Tihange-1 fuel pin radii
 
 .. figure:: ./_images/TIHANGE_tube_pin.png
-   :align: center
-   :figclass: align-center
-   :caption: Description of a Tihange-1 tube radii
+  :align: center
+  :figclass: align-center
+
+  Description of a Tihange-1 tube radii
 
 .. note:
   
