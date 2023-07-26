@@ -10,7 +10,7 @@ Following documents have been used to write this guide :
 
 - `PyGan guide <http://merlin.polymtl.ca/downloads/IGE332.pdf>`_
 
-- `Virtual environnement configuration <http://peanuts:8080/bin/view/Informatique/Python/>`_
+- `Virtual environnement configuration <http://peanuts:8080/bin/view/Informatique/Python/>`_ (or use `this link <https://virtualenv.pypa.io/en/latest/>`_)
 
 
 PyDrag is developped with the following environnement:
