@@ -9,10 +9,10 @@ This exemple is a reduced version of :file:`./data/Tihange.py` (1.95% UO2 with w
 
 The sources used to produce this inputs are :
 
-- :ref:`ref1` [1] `"Qualification du système NEPTUNE" <https://inis.iaea.org/collection/NCLCollectionStore/_Public/11/511/11511367.pdf>`_ -- CEA public note N-2092 by H.PANEK
-- :ref:`ref2` [2] `"In-core fuel management code package validation for PWRs" <https://inis.iaea.org/collection/NCLCollectionStore/_Public/26/077/26077395.pdf>`_ -- IAEA TECDOC-815
-- :ref:`ref3` [3] `"Incertitudes et ajustement des données nucléaires au moyen des méthodes déterministes, probabilistes et de mesures effectuées sur des REP" <https://publications.polymtl.ca/10545/>`_ -- Ecole Polytechnique de Montreal thesis by V.SALINO
-- :ref:`ref4` [4] `"LWR nuclear fuel bundle data for use in fuel bundle handling" <https://www.osti.gov/servlets/purl/5856990>`_ -- Pacific Northwest Laboratory note UC-85
+- :ref1: [1] `"Qualification du système NEPTUNE" <https://inis.iaea.org/collection/NCLCollectionStore/_Public/11/511/11511367.pdf>`_ -- CEA public note N-2092 by H.PANEK
+- :ref2: [2] `"In-core fuel management code package validation for PWRs" <https://inis.iaea.org/collection/NCLCollectionStore/_Public/26/077/26077395.pdf>`_ -- IAEA TECDOC-815
+- :ref3: [3] `"Incertitudes et ajustement des données nucléaires au moyen des méthodes déterministes, probabilistes et de mesures effectuées sur des REP" <https://publications.polymtl.ca/10545/>`_ -- Ecole Polytechnique de Montreal thesis by V.SALINO
+- :ref4: [4] `"LWR nuclear fuel bundle data for use in fuel bundle handling" <https://www.osti.gov/servlets/purl/5856990>`_ -- Pacific Northwest Laboratory note UC-85
 
 This chapter gives a description of this file content. To get started::
 
