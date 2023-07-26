@@ -66,10 +66,12 @@ These dimensions come from the reference [1] (p.153 and p.158):
 .. figure:: ./_images/TIHANGE_UO2_pin.png
    :align: center
    :figclass: align-center
+   :caption: Description of a Tihange-1 fuel pin radii
 
 .. figure:: ./_images/TIHANGE_tube_pin.png
    :align: center
    :figclass: align-center
+   :caption: Description of a Tihange-1 tube radii
 
 .. note:
   
