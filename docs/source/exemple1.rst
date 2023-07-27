@@ -116,7 +116,7 @@ The assembly pin layout is given as a list of list, representing each line of pi
 - I: instrumented tube
 - O: water-filled tube
 
-Those plans are taken from reference [2] (Figure 2.10) :
+Those plans are taken from reference [2] (Figure 2.10):
 
 .. figure:: ./_images/fessenheim_plan.png
   :align: center
