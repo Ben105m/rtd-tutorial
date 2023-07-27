@@ -14,6 +14,13 @@ The references for this input are :
 - [3] `"Contribution à l’élaboration et à la qualification d’un schéma de calcul pour la gestion des réacteurs PWR, à l’aide du système Neptune - suivi du réacteur Fessenheim 2" <https://inis.iaea.org/collection/NCLCollectionStore/_Public/18/076/18076909.pdf>`_ -- E.KAMHA Ph.D. thesis, Université Paris-Sud (1981)
 - [4] `"Westinghouse technology advanced manual" <https://www.nrc.gov/docs/ML0230/ML023030318.pdf>`_ -- Section 4.1 OCFR50.46 Bases
 
+TEST :
+
+- [1] `"Qualification du système NEPTUNE" <https://inis.iaea.org/collection/NCLCollectionStore/_Public/11/511/11511367.pdf>`_ -- CEA public note N-2092 by H.PANEK
+- [2] `"In-core fuel management code package validation for PWRs" <https://inis.iaea.org/collection/NCLCollectionStore/_Public/26/077/26077395.pdf>`_ -- IAEA TECDOC-815
+- [3] `"Incertitudes et ajustement des données nucléaires au moyen des méthodes déterministes, probabilistes et de mesures effectuées sur des REP" <https://publications.polymtl.ca/10545/>`_ -- Ecole Polytechnique de Montreal thesis by V.SALINO
+- [4] `"LWR nuclear fuel bundle data for use in fuel bundle handling" <https://www.osti.gov/servlets/purl/5856990>`_ -- Pacific Northwest Laboratory note UC-85
+
 To get started::
 
   for enri, Rods in [[3.10/100, 'None'],
