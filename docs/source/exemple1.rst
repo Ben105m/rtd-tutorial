@@ -133,7 +133,7 @@ Those plans are taken from reference [2] (Figure 2.10):
                          AssemblyPitch = 8.466*2.54,
                          ActiveHeight = 144*2.54)
 
-This line gives to PyDrag the pin layout and different assembly dimensions in order to represent the assembly geometry.
+This line gives to PyDrag the pin layout and different assembly dimensions in order to represent the assembly geometry. The factor 2.54 is used to convert inches into centimeters.
 
 .. code-block:: python
   :caption: Calculation of assembly power density
