@@ -50,7 +50,7 @@ This last line allows the user to call a specific nuclear data library. In this 
 
 These lines update different materials' property : Pyrex composition, AIC density, UO2 fuel density and composition. The Pyrex composition is taken from "Tableau B.16" of reference [2] :
 
-.. figure:: ./_images/Fessenheim_Pyrex.PNG
+.. figure:: ./_images/Fessenheim_Pyrex.png
   :align: center
   :figclass: align-center
    
