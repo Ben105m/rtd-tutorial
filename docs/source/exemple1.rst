@@ -48,7 +48,13 @@ This last line allows the user to call a specific nuclear data library. In this 
   materials.UO2.set_enrichment('U235', enri)
   materials.UO2.set_density(10.96*0.95*0.9883)
 
-These lines update different materials' property : Pyrex composition, AIC density, UO2 fuel density and composition.
+These lines update different materials' property : Pyrex composition, AIC density, UO2 fuel density and composition. The Pyrex composition is taken from "Tableau B.16" of reference [2] :
+
+.. figure:: ./_images/Fessenheim_Pyrex.PNG
+  :align: center
+  :figclass: align-center
+   
+  Description of Pyrex composition
 
 .. note::
 
