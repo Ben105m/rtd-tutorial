@@ -86,7 +86,7 @@ The grids are declared : in this case, they are described as 7 grids of 611.4 g 
 An exemple of fue pin description is given : 3 circles of UO2 fuel, "void" (used for the gap dilution, that is Helium in reality) and a Zircaloy-4 clad.
 
 .. code-block:: python
-  :caption: Description of a 8th assembly pin layout
+  :caption: Description of one eighth of assembly pin layout
 
   if Rods == 'None':
     PinLayout = [[I, F, F, O, F, F, O, F, F],
