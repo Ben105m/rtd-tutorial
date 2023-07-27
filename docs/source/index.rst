@@ -1,7 +1,7 @@
 Welcome to PyDrag's documentation!
 ####################################
 
-**PyDrag** is a calculation scheme made with Python and deterministic code DRAGON.
+**PyDrag** is a calculation scheme made with Python and deterministic code DRAGON. This project contains a specific distribution of Version5 (containing DRAGON modules and dependencies).
 More informations about the technologies used for this project can be found in the :doc:`documentation` section.
 In case of troubles, you can refer to :doc:`contact` page.
 
