@@ -15,12 +15,18 @@ The references for this input are :
 - [4] `"Westinghouse technology advanced manual" <https://www.nrc.gov/docs/ML0230/ML023030318.pdf>`_ -- Section 4.1 OCFR50.46 Bases
 
 
-To get started::
+To get started:
+
+.. code-block:: python
+  :caption: Listing of the modelized cases
 
   for enri, Rods in [[3.10/100, 'None'],
                      [3.10/100, 'AIC']]:
 
-This is the list of some assembly configurations, described by the fuel enrichment and the control rod types. Then::
+This is the list of some assembly configurations, described by the fuel enrichment and the control rod types. Then,
+
+.. code-block:: python
+  :caption: PyDrag call to the chosen library
 
   materials = pydrag.Materials(NuclearData= 'https://github.com/IRSN/PyNjoy2016/releases/download/JEFF-3.x/drglibJEFF-3.3_295')
 
@@ -30,7 +36,8 @@ This last line allows the user to call a specific nuclear data library. In this 
 
   If the library does already exist in the :file:`./libraries/` folder (created / updated at each calculation), the library is not be downloaded again.
 
-::
+.. code-block:: python
+  :caption: Description of several mixtures
 
   materials.Pyrex.composition={'B2O3':12.5/100,
                                'SiO2':64.8/100,
@@ -39,9 +46,7 @@ This last line allows the user to call a specific nuclear data library. In this 
                                'Na2O':3.1/100}
   materials.AIC.set_density(10.1564) 
   materials.UO2.set_enrichment('U235', enri)
-  CoefPoro = 0.95
-  CoefVoid = 0.9883
-  materials.UO2.set_density(10.96*CoefPoro*CoefVoid)
+  materials.UO2.set_density(10.96*0.95*0.9883)
 
 These lines update different materials' property : Pyrex composition, AIC density, UO2 fuel density and composition.
 
@@ -49,7 +54,8 @@ These lines update different materials' property : Pyrex composition, AIC densit
 
   In the case of fuel compositions, it is not required to declare the U238 ratio (as it is automatically calculated from the other isotopes).
 
-::
+.. code-block:: python
+  :caption: Description of temperatures and boron concentration
 
   materials.set_tfuel([547, 'F'])
   materials.water.set_temperature([547, 'F'])
@@ -57,13 +63,15 @@ These lines update different materials' property : Pyrex composition, AIC densit
 
 Then, the fuel temperature (547°F), moderator temperature (547°F) and boron concentration (600 pcm) are defined. Moreover, the core power is given (in order to be used later during evolution calculation).
 
-::
+.. code-block:: python
+  :caption: Description of assembly grids
 
   materials.grids.set_mass(7*611.4,'Inconel')
 
-The grids is declared through its mass (in this case, 7 grids of 611.4 g of Inconel).
+The grids are declared : in this case, they are described as 7 grids of 611.4 g of Inconel.
 
-::
+.. code-block:: python
+  :caption: Description of a fuel pin
 
   F = ['UO2', 0.4096,
        'void', 0.4179,
@@ -71,7 +79,8 @@ The grids is declared through its mass (in this case, 7 grids of 611.4 g of Inco
 
 An exemple of fue pin description is given : 3 circles of UO2 fuel, "void" (used for the gap dilution, that is Helium in reality) and a Zircaloy-4 clad.
 
-::
+.. code-block:: python
+  :caption: Description of a 8th assembly pin layout
 
   if Rods == 'None':
     PinLayout = [[I, F, F, O, F, F, O, F, F],
@@ -94,9 +103,15 @@ An exemple of fue pin description is given : 3 circles of UO2 fuel, "void" (used
                                       [F, F],
                                          [F]]
 
-The assembly pin layout is given as a list of list, representing each line of pins. These pins are described before (as it is done for the previously given fuel pin).
+The assembly pin layout is given as a list of list, representing each line of pins. These pins are described before (as it is done for the previously given fuel pin). For instance, we have:
 
-::
+- F: fuel pin
+- C: AIC control rod
+- I: instrumented tube
+- O: water-filled tube
+
+.. code-block:: python
+  :caption: Description of several assembly dimensions
 
   geom = pydrag.Geometry(PinLayout, symmetry = '1/8',
                          PinPitch = 0.496*2.54,
@@ -105,13 +120,15 @@ The assembly pin layout is given as a list of list, representing each line of pi
 
 This line gives to PyDrag the pin layout and different assembly dimensions in order to represent the assembly geometry.
 
-::
+.. code-block:: python
+  :caption: Calculation of assembly power density
 
   powerDens = pydrag.Power(nbAssemblies = 157, corePower = 2686)
 
 The assembly power density is automatically computed, based on the number of assemblies, the core power, and the different fuel types density.
 
-::
+.. code-block:: python
+  :caption: PyDrag evolution calculation
 
   burnup,kinf = pydrag.Deplete(materials, geom, powerDens, ThermalExpans = True)
 
