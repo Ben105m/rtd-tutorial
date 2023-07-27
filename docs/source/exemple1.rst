@@ -68,7 +68,7 @@ The grids is declared through its mass (in this case, 7 grids of 611.4 g of Inco
        'void', 0.4179,
        'Zr4', 0.4750]
 
-An exemple of fue pin description is given : 3 circles of UO2 fuel, "void" (used for the gap dilution) and a Zircaloy-4 clad.
+An exemple of fue pin description is given : 3 circles of UO2 fuel, "void" (used for the gap dilution, that is Helium in reality) and a Zircaloy-4 clad.
 
 ::
 
