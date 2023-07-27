@@ -12,6 +12,6 @@ The references come from calculations made with the first commit of PyDrag, with
 
   Before the public release, the non-regression tests were led with PyDrag and its reference calculation scheme, using different nuclear data library.
 
-Reference results were made with the different available calculation parameters (control rods type, fuel type, enrichment value, ...). These kinf are then called through pydrag.non_regression function, that displays the results for each burnup step in addtion with the kinf difference (in pcm). A warning message is displayed if the difference is higher than a chosen threshold (default:0.5 pcm). It is possible to create a txt file in the chosen location that stores those results.
+Reference results were made for the different available calculation parameters (control rods type, fuel type, enrichment value, ...). These kinf are then called through pydrag.non_regression function, that displays the results for each burnup step in addtion with the kinf difference (in pcm). A warning message is displayed if the difference is higher than a chosen threshold (default:0.5 pcm). It is possible to create a txt file in the chosen location that stores those results.
 
 Obviously, it is possible to comment/delete these sections if they are not required.
