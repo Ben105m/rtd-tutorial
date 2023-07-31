@@ -1,7 +1,7 @@
 .. _functions:
 
 ################################
-Objetcs, functions and methods 
+Objects, functions and methods 
 ################################
 
 PyDrag is manipulating different objects, each containing different kinds of informations :
